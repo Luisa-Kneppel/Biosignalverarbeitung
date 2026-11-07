@@ -10,7 +10,6 @@ Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'wiz_functions' (item size: 4) to 6000 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Database file #1: Literatur.bib
-Warning--I didn't find a database entry for "MMA8452Q"
 -- IEEEtran.bst version 1.13 (2008/09/30) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
@@ -18,37 +17,37 @@ Warning--I didn't find a database entry for "MMA8452Q"
 Done.
 You've used 2 entries,
             4039 wiz_defined-function locations,
-            822 strings with 7545 characters,
-and the built_in function-call counts, 818 in all, are:
-= -- 59
+            821 strings with 7565 characters,
+and the built_in function-call counts, 864 in all, are:
+= -- 66
 > -- 10
 < -- 0
 + -- 5
 - -- 2
-* -- 46
-:= -- 158
+* -- 49
+:= -- 168
 add.period$ -- 3
 call.type$ -- 2
-change.case$ -- 2
+change.case$ -- 3
 chr.to.int$ -- 0
 cite$ -- 2
-duplicate$ -- 62
-empty$ -- 67
+duplicate$ -- 65
+empty$ -- 68
 format.name$ -- 3
-if$ -- 156
+if$ -- 166
 int.to.chr$ -- 0
 int.to.str$ -- 2
-missing$ -- 15
+missing$ -- 16
 newline$ -- 31
 num.names$ -- 1
 pop$ -- 39
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 60
+skip$ -- 64
 stack$ -- 0
-substring$ -- 3
-swap$ -- 36
+substring$ -- 5
+swap$ -- 39
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 5
@@ -56,5 +55,4 @@ type$ -- 2
 warning$ -- 0
 while$ -- 1
 width$ -- 3
-write$ -- 40
-(There was 1 warning)
+write$ -- 41

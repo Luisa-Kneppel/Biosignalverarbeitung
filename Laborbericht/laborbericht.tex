@@ -146,58 +146,32 @@ von ungefähr $30{,}8\,^\circ\mathrm{C}$.
 
 \subsection{Beschleunigungssensor: Koordinatensystem und Skalierung}
 
-Der im Versuch verwendete Beschleunigungssensor MMA8452Q
-von NXP misst die Beschleunigung entlang drei orthogonaler
-Raumachsen (X, Y und Z). Dadurch können Beschleunigungen
-in allen drei Raumrichtungen erfasst werden.
+Der im Versuch verwendete Beschleunigungssensor MMA8452Q misst die Beschleunigung entlang drei orthogonaler
+Raumachsen (X, Y und Z). Dadurch werden Beschleunigungen unabhängig voneinander in allen drei Raumrichtungen erfasst.
 
 \textbf{Achsenzuordnung und Überprüfung}
 
-Zur Überprüfung der Achsenzuordnung wurde der Sensor
-unterschiedlich ausgerichtet. Dazu wurde er zunächst
-auf eine ebene Fläche gelegt und anschließend so gedreht,
-dass jeweils eine der drei Achsen senkrecht nach oben
-bzw. unten zeigte.
+Durch unterschiedliche Ausrichtungen des Sensors kann überprüft werden, welcher Messwert der jeweiligen Achse zugeordnet wird.
+Der Sensor wird auf eine ebene Fläche gelegt und anschließend so gedreht, dass jeweils eine der drei Achsen nach oben bzw. unten zeigt.
+Aufgrund der Erdbeschleunigung sollte bei einem ruhenden Sensor ein Wert von ungefähr $+1\,g$ oder $-1\,g$ gemessen werden. 
+Die beiden anderen Achsen sollten dabei ungefähr $0\,g$ anzeigen. \cite[S. 10, Abschnitt 3.2]{nxp_mma8452q}
 
-Aufgrund der Erdbeschleunigung sollte bei einer ruhenden
-und entsprechend ausgerichteten Sensorachse ein Wert
-von ungefähr $+1\,g$ oder $-1\,g$ gemessen werden.
-Die beiden anderen Achsen sollten dabei jeweils
-annähernd $0\,g$ anzeigen. Das Vorzeichen hängt von
-der Orientierung des Sensors und der jeweiligen
-Achsenkonvention ab.
-
-Durch diesen Versuch lässt sich feststellen, welcher
-der drei ausgegebenen Messwerte der jeweiligen
-Sensorachse zugeordnet ist.
-Zur Überprüfung der Achsenzuordnung wurde der Sensor
-unterschiedlich ausgerichtet. Dazu wurde er zunächst
-auf eine ebene Fläche gelegt und anschließend so gedreht,
-dass jeweils eine der drei Achsen senkrecht nach oben
-bzw. unten zeigte.
-
+Die Achsen des Sensors werden in Abbildung \ref{fig:mma8452q} dargestellt. 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.65\textwidth]{Abbildungen/Achsen.png}
-    \caption{Koordinatensystem und Achsen des Beschleunigungssensors MMA8452Q. Quelle: NXP, Datenblatt MMA8452Q, S. 3 \cite{nxp_mma8452q}.}
+    \caption{Richtungen der messbaren Beschleunigungen.\cite[S. 3]{nxp_mma8452q}.}
     \label{fig:mma8452q}
 \end{figure}
 
-Aufgrund der Erdbeschleunigung sollte bei einer ruhenden
-und entsprechend ausgerichteten Sensorachse ein Wert
-von ungefähr $+1\,g$ oder $-1\,g$ gemessen werden.
+\textbf{Einheit und Umrechnung der Messwerte}
 
-\textbf{Einheit und Empfindlichkeit der Messwerte}
-
-Der MMA8452Q besitzt eine digitale Auflösung von
-12 Bit. Die Beschleunigungswerte werden zunächst als
-vorzeichenbehaftete digitale Rohwerte (Counts)
-ausgegeben. Diese stellen noch keine physikalischen
-Beschleunigungswerte in $\mathrm{m/s^2}$ dar.
-
-Die Empfindlichkeit hängt vom eingestellten
-Messbereich ab. Laut Datenblatt des Herstellers
-NXP ergeben sich folgende Werte:
+Die Beschleunigungwerte werden vom Sensor als digitale Rohwerte, sogenannte Counts, ausgegeben. 
+Um diese in eine physikalische Beschleunigung umzurechnen, muss die Empfindlichkeit des eingestellten 
+Messbereichs berücksichtigt werden.
+\newline
+Laut Datenblatt ergeben sich folgende Werte
+(S. 6, Tabelle 2) \cite{nxp_mma8452q}:
 
 \begin{itemize}
     \item Messbereich $\pm 2\,g$: 1024 Counts/g
@@ -205,81 +179,24 @@ NXP ergeben sich folgende Werte:
     \item Messbereich $\pm 8\,g$: 256 Counts/g
 \end{itemize}
 
-Diese Angaben sind im Datenblatt des MMA8452Q
-in Abschnitt 3.1 auf Seite 10 beschrieben
-\cite{MMA8452Q}.
 
-\textbf{Umrechnung in die physikalische Einheit
-$\mathrm{m/s^2}$}
+Zuerst werden die Counts in die Einheit $g$ umgerechnet. Anschließend wird der berechnete Wert mit der Erdbeschleunigung von $9{,}81\,\mathrm{m/s^2}$ multipliziert, 
+um die Beschleunigung in $\mathrm{m/s^2}$ zu erhalten.
 
-Die Umrechnung der digitalen Rohwerte in eine
-physikalische Beschleunigung erfolgt in zwei Schritten.
-Zunächst werden die Counts anhand der jeweiligen
-Empfindlichkeit in die Einheit $g$ umgerechnet.
-Anschließend erfolgt die Umrechnung in
-$\mathrm{m/s^2}$ durch Multiplikation mit der
-Erdbeschleunigung von $9{,}80665\,\mathrm{m/s^2}$.
-
-Allgemein gilt:
+Für die Umrechnung von Counts in $g$ gilt:
 
 \begin{equation}
     a_g = \frac{\text{Rohwert}}{\text{Empfindlichkeit}}
 \end{equation}
 
-Die Umrechnung in die physikalische Einheit ergibt:
-
-\begin{equation}
-    a = a_g \cdot 9{,}80665\,\mathrm{m/s^2}
-\end{equation}
-
-Für den im ersten Arduino-Code verwendeten Messbereich
-von $\pm 2\,g$ erfolgt die Einstellung über:
-
-\begin{center}
-    \texttt{accel.setScale(SCALE\_2G);}
-\end{center}
-
-Mit einer Empfindlichkeit von 1024 Counts/g ergibt
-sich somit:
+Mit einer Empfindlichkeit von 1024 Counts/g ergibt sich folgende Umrechnungsformel:
 
 \begin{equation}
     \boxed{
     a = \frac{\text{Rohwert}}{1024}
-    \cdot 9{,}80665\,\mathrm{m/s^2}
+    \cdot 9{,}81\,\mathrm{m/s^2}
     }
 \end{equation}
-
-Für den Messbereich von $\pm 8\,g$, welcher im
-zweiten Arduino-Code verwendet wird, gilt:
-
-\begin{center}
-    \texttt{accel.setScale(SCALE\_8G);}
-\end{center}
-
-Da die Empfindlichkeit hier 256 Counts/g beträgt,
-lautet die entsprechende Umrechnungsformel:
-
-\begin{equation}
-    \boxed{
-    a = \frac{\text{Rohwert}}{256}
-    \cdot 9{,}80665\,\mathrm{m/s^2}
-    }
-\end{equation}
-
-\textbf{Bedeutung des Messbereichs}
-
-Die Wahl des Messbereichs beeinflusst sowohl die
-maximal erfassbare Beschleunigung als auch die
-Auflösung der Messung. Ein kleinerer Messbereich
-ermöglicht eine höhere Empfindlichkeit, während
-ein größerer Messbereich höhere Beschleunigungen
-erfassen kann.
-
-Wird der eingestellte Messbereich überschritten,
-erreicht der Sensor seine Messgrenze. Dieses
-Verhalten wird als Sättigung bezeichnet. Die
-gemessenen Beschleunigungswerte können dann nicht
-mehr vollständig dargestellt werden.
 
 \section{Dynamische Beschleunigungsmessung}
 
