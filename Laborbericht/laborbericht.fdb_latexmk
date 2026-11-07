@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex laborbericht"] 1793959254.46214 "laborbericht.aux" "laborbericht.bbl" "laborbericht" 1793959258.00687 0
+["bibtex laborbericht"] 1794049510.4177 "laborbericht.aux" "laborbericht.bbl" "laborbericht" 1794050357.15715 0
   "./IEEEtran.bst" 1793950938 59506 016987d9be15acf51cdd7252d40ecec2 ""
   "./Literatur.bib" 1793958389 802 eda3e3501defbb307c6ab2ca5c355a47 ""
-  "laborbericht.aux" 1793959256 2870 438f82dee7f0c53535e4f8202ee2d0e6 "pdflatex"
+  "laborbericht.aux" 1794050355 2870 bc3d09ec0f67d8dbc68579acedb6abec "pdflatex"
   (generated)
   "laborbericht.bbl"
   "laborbericht.blg"
   (rewritten before read)
-["pdflatex"] 1793959254.88099 "c:/Labor Biosignalverarbeitung/Biosignalverarbeitung/Laborbericht/laborbericht.tex" "laborbericht.pdf" "laborbericht" 1793959258.00746 0
+["pdflatex"] 1794050353.6934 "c:/Labor Biosignalverarbeitung/Biosignalverarbeitung/Laborbericht/laborbericht.tex" "laborbericht.pdf" "laborbericht" 1794050357.15784 0
   "Abbildungen/Achsen.png" 1793958155 38385 c25ea6ca709c2121353e25e298023a71 ""
   "C:/Users/Admin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1793951860 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/Admin/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1793951868 11548 264c31144786e74ef3841da38c77f91a ""
@@ -25,6 +25,7 @@
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msbm7.tfm" 1233951854 940 228d6584342e91276bf566bcf9716b83 ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmbx10.tfm" 1136765053 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmbx12.tfm" 1136765053 1324 c910af8c371558dc20f2d7822f66fe64 ""
+  "C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmr17.tfm" 1136765053 1292 296a67155bdbfc32aa9c636f21e91433 ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmr9.tfm" 1136765053 1292 6b21b9c2c7bebb38aa2273f7ca0fb3af ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmsl10.tfm" 1136765053 1508 efecb4a315fe0975509670a272d75ef5 ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmss10.tfm" 1136765053 1316 b636689f1933f24d1294acdf6041daaa ""
@@ -261,15 +262,15 @@
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/pst-xkey.sty" 1656236919 1694 74b0201cd6a70abed294b6332f129c41 ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/xstring/xstring.sty" 1693735632 123 a302f2c651a95033260db60e51527ae8 ""
-  "c:/Labor Biosignalverarbeitung/Biosignalverarbeitung/Laborbericht/laborbericht.tex" 1793959250 20419 5672bdf771a978bbc469cdcfa0f875cb ""
+  "c:/Labor Biosignalverarbeitung/Biosignalverarbeitung/Laborbericht/laborbericht.tex" 1794050352 20802 1b915aa8f0d1627af13cc7850775a8bc ""
   "deckblatt.tex" 1793953427 910 1ab88281107da859e3fa56d2f620643b ""
   "definitions.tex" 1793953665 9475 fa2e4af2f821794bbbb63aaa3d396007 ""
-  "laborbericht.aux" 1793959256 2870 438f82dee7f0c53535e4f8202ee2d0e6 "pdflatex"
-  "laborbericht.bbl" 1793959254 1161 95f3d00fff4e41f5c00596c5f3fa95fe "bibtex laborbericht"
-  "laborbericht.lof" 1793959256 188 3c54fb139b48087580796cd0e54cb4c7 "pdflatex"
-  "laborbericht.lot" 1793959256 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "laborbericht.tex" 1793959250 20419 5672bdf771a978bbc469cdcfa0f875cb ""
-  "laborbericht.toc" 1793959256 1588 198ed7b5a6ac9b19f8315045d156734f "pdflatex"
+  "laborbericht.aux" 1794050355 2870 bc3d09ec0f67d8dbc68579acedb6abec "pdflatex"
+  "laborbericht.bbl" 1794049510 1161 95f3d00fff4e41f5c00596c5f3fa95fe "bibtex laborbericht"
+  "laborbericht.lof" 1794050355 188 3c54fb139b48087580796cd0e54cb4c7 "pdflatex"
+  "laborbericht.lot" 1794050355 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "laborbericht.tex" 1794050352 20802 1b915aa8f0d1627af13cc7850775a8bc ""
+  "laborbericht.toc" 1794050355 1588 9b29cff353e7e735869e8fb676cfc8fa "pdflatex"
   (generated)
   "laborbericht.aux"
   "laborbericht.lof"
