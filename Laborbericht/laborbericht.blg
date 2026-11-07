@@ -16,45 +16,45 @@ Warning--I didn't find a database entry for "MMA8452Q"
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 
 Done.
-You've used 1 entry,
+You've used 2 entries,
             4039 wiz_defined-function locations,
-            817 strings with 7385 characters,
-and the built_in function-call counts, 405 in all, are:
-= -- 27
-> -- 1
+            822 strings with 7545 characters,
+and the built_in function-call counts, 818 in all, are:
+= -- 59
+> -- 10
 < -- 0
-+ -- 1
-- -- 0
-* -- 31
-:= -- 89
-add.period$ -- 1
-call.type$ -- 1
-change.case$ -- 0
++ -- 5
+- -- 2
+* -- 46
+:= -- 158
+add.period$ -- 3
+call.type$ -- 2
+change.case$ -- 2
 chr.to.int$ -- 0
-cite$ -- 1
-duplicate$ -- 26
-empty$ -- 28
-format.name$ -- 0
-if$ -- 66
+cite$ -- 2
+duplicate$ -- 62
+empty$ -- 67
+format.name$ -- 3
+if$ -- 156
 int.to.chr$ -- 0
-int.to.str$ -- 1
-missing$ -- 6
-newline$ -- 28
-num.names$ -- 0
-pop$ -- 13
+int.to.str$ -- 2
+missing$ -- 15
+newline$ -- 31
+num.names$ -- 1
+pop$ -- 39
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 27
+skip$ -- 60
 stack$ -- 0
-substring$ -- 0
-swap$ -- 15
+substring$ -- 3
+swap$ -- 36
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 1
+type$ -- 2
 warning$ -- 0
-while$ -- 0
-width$ -- 2
-write$ -- 32
+while$ -- 1
+width$ -- 3
+write$ -- 40
 (There was 1 warning)

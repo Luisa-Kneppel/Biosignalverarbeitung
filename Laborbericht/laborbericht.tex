@@ -54,71 +54,84 @@ und die Auswirkungen auf die Messdaten untersucht.
 Die aufgenommenen Daten werden mit Python ausgewertet und grafisch dargestellt.
 
 \section{Grundlagen und Messsystem}
-
-
 \subsection{Aufbau und Funktionsweise des Messsystems}
-
-\subsection{Digitalisierung und Temperaturmessung}
-Zur Bestimmung einer Körpertemperatur wird ein Temperatursensor
-mit einem Messbereich von $0$ bis $40\,^\circ\mathrm{C}$
-betrachtet. Der Sensor liefert eine Ausgangsspannung zwischen
-$0$ und $3{,}3\,\mathrm{V}$. Diese wird von einem
-Mikrocontroller mit einer Referenzspannung von $5\,\mathrm{V}$
-und einer ADC-Auflösung von $10\,\mathrm{Bit}$ digitalisiert.
-
-Ausgehend von einem ausgegebenen ADC-Messwert von $520$
+HIER GRAFIK UND BESCHREIBUNG!!
+\subsection{Temperaturmessung mithilfe eines Sensors}
+Die Körpertemperatur wird mithilfe eines Sensors bestimmt, der Spannungen von
+$0$ bis $3{,}3\,\mathrm{V}$ messen kann und einen Messbereich von 
+$0$ bis $40\,^\circ\mathrm{C}$ hat. Der Microcontroller, der die Sensordaten
+verbeitet und digitalisiert, kann bis zu $5\,\mathrm{V}$ und und mit einer Auflösung 
+von $10\,\mathrm{Bit}$ messen.
+Für einen ausgegebenen Messwert von $520$
 soll die entsprechende Temperatur berechnet werden.
+\newline
+\newline
+\textbf{1. Berechnung der Sensorspannung aus dem ADC-Messwert}
 
-\textbf{Gegeben:}
-\begin{itemize}
-    \item Sensor-Messbereich: $0$--$40\,^\circ\mathrm{C}$
-    \item Sensorspannung: $0$--$3{,}3\,\mathrm{V}$
-    \item Mikrocontroller-Messbereich: $0$--$5\,\mathrm{V}$
-    \item ADC-Auflösung: $10\,\mathrm{Bit}$
-    \item ADC-Messwert: $520$
-\end{itemize}
+Ein 10-Bit-ADC kann $2^{10}=1024$ unterschiedliche Werte darstellen.
+Der digitale Wertebereich reicht also von $0$ bis $1023$.
 
-\textbf{Schritt 1: Umrechnung des ADC-Wertes in eine Spannung}
-
-Ein 10-Bit-Analog-Digital-Wandler (ADC) kann insgesamt
-$2^{10}=1024$ unterschiedliche Werte darstellen.
-Der digitale Wertebereich reicht somit von $0$ bis $1023$.
-
-Die gemessene Spannung ergibt sich aus:
+Die Auflösung (kleinstmögliche messbare Spannungsänderung in Volt) lässt sich
+aus folgender Formel berechnen (siehe Vorlesungsfolien, S. 14)\cite{vorlesung_signalerfassung}:
 
 \begin{equation}
-    U_{\mathrm{ADC}} =
-    \frac{520}{1023} \cdot 5\,\mathrm{V}
+    \Delta V = \frac{V_{\mathrm{FS}}}{2^N}
 \end{equation}
 
-Damit ergibt sich:
+Dabei bezeichnet $V_{\mathrm{FS}}$ den Messbereich des ADC (Full Scale)
+und $N$ die Bit-Tiefe.
+
+Durch Einsetzen der gegebenen Werte ergibt sich:
 
 \begin{equation}
-    U_{\mathrm{ADC}} \approx 2{,}542\,\mathrm{V}
+    \Delta V = \frac{5\,\mathrm{V}}{2^{10}}
+    = 0{,}004883\,\mathrm{V}
+\end{equation}
+\newline
+Die Sensorauflösung beträgt somit ungefähr $4{,}88\,\mathrm{mV}$.
+\newline
+Im nächsten Schritt wird die Sensorspannung durch folgende Formel berechnet:
+
+\begin{equation}
+    U_{\mathrm{Sensor}} =
+    ADC_{\mathrm{Wert}} \cdot \Delta V
 \end{equation}
 
-\textbf{Schritt 2: Umrechnung der Spannung in eine Temperatur}
+Mit dem gegebenen Messwert von $520$ ergibt sich:
 
-Der Temperatursensor besitzt eine lineare Kennlinie.
-Bei einer Ausgangsspannung von $0\,\mathrm{V}$ beträgt
-die Temperatur $0\,^\circ\mathrm{C}$, während bei
-$3{,}3\,\mathrm{V}$ eine Temperatur von
-$40\,^\circ\mathrm{C}$ erreicht wird.
+\begin{equation}
+    U_{\mathrm{Sensor}} =
+    520 \cdot 0{,}004883\,\mathrm{V}
+\end{equation}
 
-Die Temperatur lässt sich daher proportional zur
-Ausgangsspannung berechnen:
+\begin{equation}
+    \boxed{U_{\mathrm{Sensor}} \approx 2{,}539\,\mathrm{V}}
+\end{equation}
+
+\textbf{2. Umrechnung der Spannung in eine Temperatur}
+
+Aus der Aufgabenstellung geht hervor, dass ein linearer Zusammenhang
+zwischen der Sensorspannung und der Temperatur besteht.
+
+\begin{equation}
+    \frac{U_{\mathrm{Sensor}}}{U_{\mathrm{Sensor,max}}}
+    =
+    \frac{T}{T_{\mathrm{max}}}
+\end{equation}
+
+Durch Umstellen der Gleichung nach $T$ ergibt sich:
+\begin{equation}
+    T =
+    \frac{U_{\mathrm{Sensor}}}{U_{\mathrm{Sensor,max}}}
+    \cdot T_{\mathrm{max}}
+\end{equation}
+
+Werden die gegebenen Werte und die zuvor berechnete Spannung 
+in die Gleichung eingesetzt, ergibt sich:
 
 \begin{equation}
     T =
-    \frac{U_{\mathrm{ADC}}}{3{,}3\,\mathrm{V}}
-    \cdot 40\,^\circ\mathrm{C}
-\end{equation}
-
-Einsetzen der zuvor berechneten Spannung ergibt:
-
-\begin{equation}
-    T =
-    \frac{2{,}542}{3{,}3}
+    \frac{2{,}539\,\mathrm{V}}{3{,}3\,\mathrm{V}}
     \cdot 40\,^\circ\mathrm{C}
 \end{equation}
 
@@ -128,10 +141,8 @@ Daraus folgt:
     \boxed{T \approx 30{,}8\,^\circ\mathrm{C}}
 \end{equation}
 
-\textbf{Ergebnis:}
-Der vom Mikrocontroller ausgegebene ADC-Messwert von
-$520$ entspricht einer Temperatur von ungefähr
-$30{,}8\,^\circ\mathrm{C}$.
+Der ADC-Messwert von $520$ entspricht somit einer Temperatur
+von ungefähr $30{,}8\,^\circ\mathrm{C}$.
 
 \subsection{Beschleunigungssensor: Koordinatensystem und Skalierung}
 
