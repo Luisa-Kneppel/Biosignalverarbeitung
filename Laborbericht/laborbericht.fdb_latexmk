@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex laborbericht"] 1794065062.54666 "laborbericht.aux" "laborbericht.bbl" "laborbericht" 1794065707.37991 0
+["bibtex laborbericht"] 1794065062.54666 "laborbericht.aux" "laborbericht.bbl" "laborbericht" 1794065798.32007 0
   "./IEEEtran.bst" 1793950938 59506 016987d9be15acf51cdd7252d40ecec2 ""
   "./Literatur.bib" 1794061125 1120 8343c57370796307625f18034b2e9c66 ""
-  "laborbericht.aux" 1794065706 2920 920decf6e6c6f81c87c7666f3b6e9ed4 "pdflatex"
+  "laborbericht.aux" 1794065797 2920 920decf6e6c6f81c87c7666f3b6e9ed4 "pdflatex"
   (generated)
   "laborbericht.bbl"
   "laborbericht.blg"
   (rewritten before read)
-["pdflatex"] 1794065703.91907 "c:/Labor Biosignalverarbeitung/Biosignalverarbeitung/Laborbericht/laborbericht.tex" "laborbericht.pdf" "laborbericht" 1794065707.38053 0
+["pdflatex"] 1794065794.93434 "c:/Labor Biosignalverarbeitung/Biosignalverarbeitung/Laborbericht/laborbericht.tex" "laborbericht.pdf" "laborbericht" 1794065798.32079 0
   "Abbildungen/Achsen.png" 1793958155 38385 c25ea6ca709c2121353e25e298023a71 ""
   "C:/Users/Admin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1793951860 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/Admin/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1793951868 11548 264c31144786e74ef3841da38c77f91a ""
@@ -260,15 +260,15 @@
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/pst-xkey.sty" 1656236919 1694 74b0201cd6a70abed294b6332f129c41 ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/xstring/xstring.sty" 1693735632 123 a302f2c651a95033260db60e51527ae8 ""
-  "c:/Labor Biosignalverarbeitung/Biosignalverarbeitung/Laborbericht/laborbericht.tex" 1794065702 17291 2ff8db7a89b6ea207989dbba5b0c432f ""
+  "c:/Labor Biosignalverarbeitung/Biosignalverarbeitung/Laborbericht/laborbericht.tex" 1794065793 17290 a072669b202c1aea4eae17893b287b40 ""
   "deckblatt.tex" 1793953427 910 1ab88281107da859e3fa56d2f620643b ""
   "definitions.tex" 1793953665 9475 fa2e4af2f821794bbbb63aaa3d396007 ""
-  "laborbericht.aux" 1794065706 2920 920decf6e6c6f81c87c7666f3b6e9ed4 "pdflatex"
+  "laborbericht.aux" 1794065797 2920 920decf6e6c6f81c87c7666f3b6e9ed4 "pdflatex"
   "laborbericht.bbl" 1794065062 1378 46a20845fac3de2a898edb1ffac8015b "bibtex laborbericht"
-  "laborbericht.lof" 1794065706 131 7cc5c6085398cbaa1097530d459367a3 "pdflatex"
-  "laborbericht.lot" 1794065706 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "laborbericht.tex" 1794065702 17291 2ff8db7a89b6ea207989dbba5b0c432f ""
-  "laborbericht.toc" 1794065706 1591 9bf73d152031e27d481e1d590620c262 "pdflatex"
+  "laborbericht.lof" 1794065797 131 7cc5c6085398cbaa1097530d459367a3 "pdflatex"
+  "laborbericht.lot" 1794065797 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "laborbericht.tex" 1794065793 17290 a072669b202c1aea4eae17893b287b40 ""
+  "laborbericht.toc" 1794065797 1591 9bf73d152031e27d481e1d590620c262 "pdflatex"
   (generated)
   "laborbericht.aux"
   "laborbericht.lof"
