@@ -202,9 +202,11 @@ Mit einer Empfindlichkeit von 1024 Counts/g ergibt sich folgende Umrechnungsform
 
 \subsection{Durchführung und Darstellung der Messung (Aufgabe 4a)}
 
-Für die dynamische Beschleunigungsmessung wurde der Beschleunigungssensor gemäß der Versuchsanleitung mit dem Arduino-Code \texttt{Lab1Code1} betrieben. Der Sensor wurde in der geschlossenen Hand gehalten und für etwa zehn Sekunden möglichst gleichmäßig einmal pro Sekunde auf und ab bewegt. Die vom Sensor erfassten Messwerte wurden über den seriellen Monitor ausgegeben und anschließend zur weiteren Verarbeitung in einer Textdatei gespeichert.
+Zunächst wurde der Sensor mit geschlossener Hand für ca. zehn Sekunden auf und ab bewegt.
+Die Messwerte wurden ausgegeben und anschließend in einer Textdatei gespeichert.
 
-Für die Auswertung wurden vier Sekunden der aufgezeichneten Messdaten ausgewählt und grafisch dargestellt. Dabei wurde die Beschleunigung über der Zeit aufgetragen.
+Für die Auswertung wurden vier Sekunden der aufgezeichneten Messdaten ausgewählt
+und grafisch dargestellt. Dabei wurde die Beschleunigung über der Zeit aufgetragen.
 
 % HIER DEN PLOT EINFÜGEN
 % Beispiel:
@@ -216,24 +218,20 @@ Für die Auswertung wurden vier Sekunden der aufgezeichneten Messdaten ausgewäh
 % \end{figure}
 
 \subsection{Plateaus der Signalpeaks (Aufgabe 4b)}
+An den Spitzen des Signals sind Plateaus zu erkennen, da es zu einer Sättigung des Sensors kommt.
+Bei der verwendeten Einstellung \texttt{SCALE\_2G} beträgt der Messbereich des Sensors ungefähr $-2g$ bis $+2g$.
+Wird dieser Bereich von der tatsächlichen Beschleunigung überschritten, kann der Sensor den Wert nicht mehr korrekt erfassen und der maximal darstellbare
+Wert wird ausgegeben. Die Spitzen des Signals werden also abgeschnitten und es entstehen Plateaus.
 
-In den aufgezeichneten Beschleunigungssignalen können an den Spitzen der Peaks Plateaus auftreten. Diese entstehen durch eine Sättigung des Beschleunigungssensors. Bei der verwendeten Einstellung \texttt{SCALE\_2G} beträgt der Messbereich des Sensors ungefähr $-2g$ bis $+2g$. Überschreitet die tatsächliche Beschleunigung diesen Bereich, kann der Sensor den Wert nicht mehr korrekt erfassen. Stattdessen wird der maximal darstellbare Messwert ausgegeben. Dadurch werden die Spitzen des Signals abgeschnitten und es entstehen Plateaus. Die Plateaus liegen jeweils auf demselben Wert, da der Sensor bei Überschreiten seines Messbereichs immer denselben maximalen beziehungsweise minimalen digitalen Wert ausgibt.
-
-Eine Möglichkeit, dieses Problem zu reduzieren, besteht darin, den Messbereich des Sensors zu vergrößern. Der MMA8452Q bietet hierfür die Einstellungen $\pm 2g$, $\pm 4g$ und $\pm 8g$. Bei einem größeren Messbereich können höhere Beschleunigungen erfasst werden, allerdings nimmt gleichzeitig die Empfindlichkeit ab. Bei einer Auflösung von 12 Bit ergeben sich folgende Empfindlichkeiten:
-
-\begin{itemize}
-    \item $\pm 2g$: 1024 Counts/g
-    \item $\pm 4g$: 512 Counts/g
-    \item $\pm 8g$: 256 Counts/g
-\end{itemize}
-
-Die Wahl des Messbereichs hängt somit von der jeweiligen Anwendung ab. Für geringe Beschleunigungen ist ein kleiner Messbereich vorteilhaft, während für stärkere Bewegungen ein größerer Messbereich gewählt werden sollte.
+Um das Problem zu reduzieren, könnte man den Messbereich des Sensors vergrößern (beispielsweise auf \texttt{SCALE\_4G} oder \texttt{SCALE\_8G}). Allerdings nimmt dabei die Empfindlichkeit ab, 
+wodurch kleinere Beschleunigungen nicht mehr so genau erfasst werden können. 
 
 \subsection{Abweichungen zwischen Bewegung und Messsignal (Aufgabe 4c)}
-
-Die aufgezeichneten Messdaten stellen die tatsächlich ausgeführte Handbewegung nicht exakt dar, da der Beschleunigungssensor nicht die Position oder Geschwindigkeit, sondern die Beschleunigung misst. Daher entspricht der Verlauf des Messsignals nicht unmittelbar der sichtbaren Bewegung des Sensors. Zusätzlich überlagert die Erdbeschleunigung das gemessene Signal. Auch die Handbewegung selbst erfolgt nicht vollkommen gleichmäßig oder sinusförmig, wodurch Schwankungen im Signal entstehen können.
-
-Ein weiterer Einflussfaktor ist die Abtastrate des Sensors, die durch die sogenannte Output Data Rate (ODR) festgelegt wird. Sie gibt an, wie viele neue Messwerte pro Sekunde bereitgestellt werden. Bei einer zu niedrigen Abtastrate können schnelle Änderungen der Beschleunigung nicht ausreichend erfasst werden. Während des Versuchs wurde die Abtastrate daher angepasst. Bei einer Einstellung von 1 Hz werden lediglich ein Messwert pro Sekunde erfasst, während bei 200 Hz deutlich mehr Messwerte zur Verfügung stehen. Dadurch kann der zeitliche Verlauf der Bewegung genauer dargestellt werden. Weitere Abweichungen können durch Messrauschen, interne Filterung des Sensors und eine mögliche Sättigung bei Überschreiten des eingestellten Messbereichs entstehen.
+Die Messdaten stellen die tatsächlich ausgeführte Bewegung nicht dar, da der Sensor die Beschleunigung nur in bestimmten Zeitabständen erfasst (Abtastrate).
+Wie viele neue Messwerte pro Sekunde bereitgestellt werden, wird durch die Output Data Rate (ODR) bestimmt. Bei einer zu niedrigen Abtastrate können schnelle Änderungen 
+der Beschleunigung verloren gehen.
+Zusätzlich können unregelmäßige Handbewegungen zu Schwankungen
+im aufgezeichneten Messsignal führen. 
 
 
 \section{Anpassung der Abtastrate und Vergleich der Messungen}
