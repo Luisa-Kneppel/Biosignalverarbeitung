@@ -366,40 +366,32 @@ Durch den verwendeten Filter werden schnelle Schwankungen abgeschwächt, währen
 erhalten bleiben. Der Filter verbessert somit die Lesbarkeit und Interpretierbarkeit der aufgezeichneten Beschleunigungsdaten.
 \subsection{Bestimmung der Abtastfrequenz (Aufgabe 8)}
 
-Zur Bestimmung der tatsächlichen Abtastfrequenz wurde jedem Messwert während der Datenerfassung ein Zeitstempel direkt auf dem Mikrocontroller zugeordnet. Hierfür wurde eine Zeitfunktion des Mikrocontrollers verwendet. Die Zeitstempel wurden gemeinsam mit den Beschleunigungswerten gespeichert.
-
-Aus den Zeitstempeln wurden zunächst die zeitlichen Abstände zwischen zwei aufeinanderfolgenden Messungen berechnet:
-
-\begin{equation}
-    \Delta t_i = t_{i+1} - t_i
-\end{equation}
-
-Die mittlere Abtastfrequenz ergibt sich aus dem Kehrwert des mittleren zeitlichen Abstands:
+Zur Bestimmung der tatsächlichen Abtastfrequenz wurde jedem Messwert während der Datenerfassung ein Zeitstempel direkt auf dem Mikrocontroller 
+zugeordnet. Anhand dieser Zeitstempel wurden die zeitlichen Abstände zwischen zwei aufeinanderfolgenden Messungen berechnet. Aus dem mittleren 
+zeitlichen Abstand lässt sich anschließend die Abtastfrequenz bestimmen:
 
 \begin{equation}
     f_s = \frac{1}{\overline{\Delta t}}
 \end{equation}
 
-Die Standardabweichung der zeitlichen Abstände beschreibt die Schwankung der Messintervalle:
+Zusätzlich wurde die Standardabweichung der zeitlichen Abstände berechnet, um die Regelmäßigkeit der Messungen zu beurteilen.
 
-\begin{equation}
-    \sigma_{\Delta t} =
-    \sqrt{
-    \frac{1}{N-1}
-    \sum_{i=1}^{N}
-    (\Delta t_i-\overline{\Delta t})^2
-    }
-\end{equation}
+Die Auswertung umfasst insgesamt 4602 Messwerte. Der mittlere zeitliche Abstand zwischen zwei aufeinanderfolgenden Messungen beträgt $9{,}7745\,ms$.
+ Die Standardabweichung der Zeitabstände beträgt $0{,}1535\,ms$. Daraus ergibt sich eine mittlere Abtastfrequenz von $102{,}3074\,Hz$. Die 
+ Standardabweichung der berechneten Abtastfrequenzen beträgt $1{,}5644\,Hz$.
 
-% HIER PLOT DER ZEITABSTÄNDE ODER HISTOGRAMM EINFÜGEN
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=0.85\textwidth]{Abbildungen/Aufgabe8.png}
-%     \caption{Verteilung der zeitlichen Abstände zwischen aufeinanderfolgenden Messungen.}
-%     \label{fig:aufgabe8}
-% \end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Abbildungen/Abtastfrequenz_Ausschnitt.png}
+    \caption{Zeitliche Abstände zwischen aufeinanderfolgenden Messungen in einem ausgewählten zweisekündigen Messabschnitt. Die rote Linie kennzeichnet 
+    den mittleren Zeitabstand, die grünen Linien markieren jeweils eine Standardabweichung oberhalb und unterhalb des Mittelwerts.}
+    \label{fig:abtastfrequenz}
+\end{figure}
 
-Die berechnete mittlere Abtastfrequenz beträgt [WERT] Hz. Die Standardabweichung der zeitlichen Abstände beträgt [WERT] ms. Damit lässt sich beurteilen, wie konstant die Messintervalle während der Datenerfassung waren.
+Im Diagramm ist zu erkennen, dass die zeitlichen Abstände überwiegend zwischen $9{,}7\,ms$ und $10{,}2\,ms$ liegen. 
+Die Schwankungen um den Mittelwert sind vergleichsweise gering. Dies wird auch durch die Standardabweichung von $0{,}1535\,ms$ bestätigt. 
+Die Messungen erfolgen somit zeitlich relativ gleichmäßig. Die ermittelte Abtastfrequenz von ungefähr $102\,Hz$ beschreibt die durchschnittliche 
+Ausleserate des Messsystems.
 
 \subsection{Vergleich mit dem mobilen Messsystem (Aufgabe 9)}
 
