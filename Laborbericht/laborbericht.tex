@@ -48,14 +48,77 @@
 \section{Einleitung}
 Ziel des Labors ist es, die Grundlagen der Datenerfassung und Signalverarbeitung anhand eines 
 Beschleunigungssensors kennenzulernen.
-Hierfür werden statische und dynamische Messungen durgeführt, die Sensoreinstellungen verändert 
+Hierfür werden statische und dynamische Messungen durgeführt, den Arduino-Code sowie den Aufbau des Messsystems verändert 
 und die Auswirkungen auf die Messdaten untersucht.
 \newline
 Die ausgewerteten Daten werden mittels Python dargestellt.
 
 \section{Grundlagen und Messsystem}
 \subsection{Aufbau und Funktionsweise des Messsystems}
-HIER GRAFIK UND BESCHREIBUNG!!
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}[
+  >=Stealth, font=\small,
+  box/.style={draw, rounded corners, thick, minimum width=2.4cm,
+              minimum height=1.4cm, align=center},
+  bus/.style={very thick, <->},
+  pw/.style={very thick, ->, red!70!black},
+  lbl/.style={font=\footnotesize, align=center}
+]
+  \node[box] (bat) {9\,V-Block-\\batterie};
+  \node[box, right=2.0cm of bat] (mcu) {Mikrocontroller-\\Board};
+  \node[box, right=2.0cm of mcu] (acc) {Beschleunigungs-\\sensor};
+  \node[box, right=2.0cm of acc] (sd) {SD-Karten-\\gerät};
+  \node[box, below=1.6cm of acc, dashed] (phys) {Beschleunigung};
+  \node[box, below=1.6cm of sd, dashed] (card) {SD-Karte};
+
+  \draw[pw] (bat) -- node[above, lbl]{(1) 9\,V DC} (mcu);
+  \draw[bus] (mcu) -- node[above, lbl]{(2) I$^2$C} (acc);
+  \draw[bus] (acc) -- node[above, lbl]{(3) I$^2$C}(sd);
+  \draw[->, very thick] (phys) -- node[right, lbl]{(4) mechanische\\Größe} (acc);
+  \draw[->, very thick] (sd) -- node[right, lbl]{(5) Daten-\\speicherung} (card);
+\end{tikzpicture}
+\caption{Blockschaltbild des Messsystems}
+\end{figure}
+
+\subsection{Beschreibung des Messsystems}
+\subsection*{Komponenten}
+\begin{itemize}
+  \item \textbf{9\,V-Blockbatterie:} Versorgt das gesamte System mit
+  Strom.
+
+  \item \textbf{Mikrocontroller:} Arbeitet als I$^2$C-Controller,
+  wandelt die 9\,V in die Betriebsspannung um und liest die Messdaten aus.
+
+  \item \textbf{Beschleunigungssensor:} Misst die Beschleunigung
+  in mehreren Achsen und die digitalen Werte werden an
+  den Controller weitergegeben.
+
+  \item \textbf{SD-Kartengerät:} Empfängt die Messdaten und
+  speichert sie als Datei auf der SD-Karte.
+\end{itemize}
+
+\subsection*{Verbindungen}
+\begin{enumerate}
+  \item[(1)] \textbf{9\,V DC:} Spannungsversorgung von der Batterie zum
+  Board über den Hohlstecker, ohne Datenübertragung.
+
+  \item[(2)] \textbf{I$^2$C, 100\,kHz (Board $\leftrightarrow$ Sensor):}
+  Vieradriges Kabel mit SDA (Daten), SCL (Takt), VCC und GND. Der Controller
+  gibt den Takt vor.
+
+  \item[(3)] \textbf{I$^2$C, 100\,kHz (Sensor $\leftrightarrow$ SD-Gerät):}
+  Das SD-Gerät hängt am selben Bus. Der Controller wählt über die Adresse aus, mit welchem Gerät er gerade kommuniziert.
+
+  \item[(4)] \textbf{Beschleunigung $\rightarrow$ Sensor:} Die mechanische
+  Beschleunigung wirkt auf den Sensor und wird dort in ein elektrisches
+  Signal umgewandelt.
+
+  \item[(5)] \textbf{SD-Gerät $\rightarrow$ SD-Karte:} Die empfangenen
+  Messwerte werden auf der Karte gespeichert.
+\end{enumerate}
+
+
 \subsection{Temperaturmessung mithilfe eines Sensors}
 Die Körpertemperatur wird mithilfe eines Sensors bestimmt, der Spannungen von
 $0$ bis $3{,}3\,\mathrm{V}$ messen kann und einen Messbereich von 
