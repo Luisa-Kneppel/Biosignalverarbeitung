@@ -66,7 +66,7 @@ Die ausgewerteten Daten werden mittels Python dargestellt.
   lbl/.style={font=\footnotesize, align=center}
 ]
   \node[box] (bat) {9\,V-Block-\\batterie};
-  \node[box, right=2.0cm of bat] (mcu) {Mikrocontroller-\\Board};
+  \node[box, right=2.0cm of bat] (mcu) {Mikrocontroller};
   \node[box, right=2.0cm of mcu] (acc) {Beschleunigungs-\\sensor};
   \node[box, right=2.0cm of acc] (sd) {SD-Karten-\\gerät};
   \node[box, below=1.6cm of acc, dashed] (phys) {Beschleunigung};
@@ -88,7 +88,7 @@ Die ausgewerteten Daten werden mittels Python dargestellt.
   Strom.
 
   \item \textbf{Mikrocontroller:} Arbeitet als I$^2$C-Controller,
-  wandelt die 9\,V in die Betriebsspannung um und liest die Messdaten aus.
+  wandelt die 9\,V in die Betriebsspannung von 3.3\,V um und liest die Messdaten aus.
 
   \item \textbf{Beschleunigungssensor:} Misst die Beschleunigung
   in mehreren Achsen und die digitalen Werte werden an
@@ -327,36 +327,43 @@ Bewegungsdurchführung und die weiterhin vorhandene Erdbeschleunigung. Unterschi
 
 \subsection{Messung der sechs Sensororientierungen (Aufgabe 6)}
 
-Zur Überprüfung der Beschleunigungsmessung wurden alle drei Achsen des MMA8452Q jeweils nach oben und nach unten ausgerichtet. Daraus ergeben sich insgesamt sechs verschiedene Sensororientierungen. Für jede Orientierung wurde eine Messdauer von etwa zehn Sekunden verwendet.
+Zur Überprüfung der Messgenauigkeit des Beschleunigungssensors wurden alle drei Sensorachsen (X, Y und Z) jeweils nach oben und nach unten ausgerichtet. Daraus ergeben sich insgesamt sechs verschiedene Sensororientierungen. Die Messwerte aller sechs Orientierungen wurden gemeinsam in einem Diagramm dargestellt.
 
-Bei ruhendem Sensor sollte jeweils die vertikale Achse eine Beschleunigung von ungefähr $1g$ beziehungsweise $-1g$ anzeigen. Die beiden horizontal ausgerichteten Achsen sollten dagegen Werte nahe $0g$ liefern. Das Vorzeichen hängt von der jeweiligen Orientierung und der Achsendefinition des Sensors ab.
+\begin{figure}[H]
+     \centering
+     \includegraphics[width=0.9\textwidth]{Abbildungen/diagramm_nummer6.png}
+     \caption{Ungefilterte Beschleunigungsmessungen für die sechs verschiedenen Sensororientierungen.}
+     \label{fig:aufgabe6}
+\end{figure}
 
-Die aufgezeichneten Messwerte wurden gemeinsam in einem Diagramm dargestellt.
+Bei einem ruhenden Sensor sollte die jeweils vertikal ausgerichtete Achse eine Beschleunigung von ungefähr $+1g$ beziehungsweise $-1g$ anzeigen. Die beiden anderen Achsen sollten dagegen Werte nahe $0g$ aufweisen. Das Vorzeichen hängt davon ab, ob die jeweilige Sensorachse nach oben oder nach unten zeigt.
 
-% HIER PLOT MIT ALLEN SECHS ORIENTIERUNGEN EINFÜGEN
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=0.9\textwidth]{Abbildungen/Aufgabe6.png}
-%     \caption{Beschleunigungsmessungen für die sechs verschiedenen Sensororientierungen.}
-%     \label{fig:aufgabe6}
-% \end{figure}
+Die Ergebnisse in Abbildung \ref{fig:aufgabe6} bestätigen dieses Verhalten weitgehend. Bei der Orientierung mit der Z-Achse nach oben (\texttt{z\_oben}) liegt der Messwert der Z-Achse bei ungefähr $+1g$, während die X- und Y-Achse Werte nahe $0g$ aufweisen. Wird die Z-Achse nach unten ausgerichtet (\texttt{z\_unten}), beträgt die gemessene Beschleunigung ungefähr $-1g$.
 
-Anhand der Messwerte wird überprüft, ob die erwarteten Beschleunigungswerte von ungefähr $\pm 1g$ auf der jeweils vertikalen Achse erreicht werden. Abweichungen können beispielsweise durch eine ungenaue Ausrichtung des Sensors, Messrauschen oder Offsetfehler entstehen.
+Dasselbe Verhalten ist für die X- und Y-Achse zu beobachten. 
 
-\subsection{Vergleich gefilterter und ungefilterter Messdaten (Aufgabe 7)}
+Die Messwerte bestätigen somit, dass der Sensor die Erdbeschleunigung korrekt entlang der jeweiligen Raumachse erfasst. Insbesondere ist erkennbar, dass sich das Vorzeichen der gemessenen Beschleunigung beim Umkehren der Sensororientierung ändert.
 
-Zur Untersuchung der Signalfilterung wurden die ursprünglichen Messdaten mit den gefilterten Messdaten verglichen. Hierfür wurde ein Tiefpassfilter in Form eines gleitenden Mittelwerts verwendet.
+Allerdings sind in den Messkurven teilweise Schwankungen und kurzzeitige Ausschläge zu erkennen. Diese treten insbesondere während der Übergänge zwischen den verschiedenen Sensororientierungen auf und können durch Bewegungen beim Drehen und Ablegen des Sensors sowie durch Messrauschen verursacht werden. Auch in den annähernd konstanten Messabschnitten sind kleinere Abweichungen vom idealen Wert von $\pm 1g$ sichtbar.
 
-% HIER PLOT MIT GEFILTERTEN UND UNGEFILTERTEN DATEN EINFÜGEN
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=0.9\textwidth]{Abbildungen/Aufgabe7.png}
-%     \caption{Vergleich der ungefilterten und gefilterten Beschleunigungsdaten.}
-%     \label{fig:aufgabe7}
-% \end{figure}
+Insgesamt stimmen die Messergebnisse mit den theoretisch erwarteten Beschleunigungswerten überein.
 
-Der Tiefpassfilter reduziert hochfrequentes Messrauschen und glättet dadurch den Signalverlauf. Da die eigentliche Handbewegung deutlich langsamer als das hochfrequente Rauschen ist, verbessert die Filterung die Darstellung des Nutzsignals. Allerdings können dadurch schnelle Signaländerungen abgeschwächt und die Peaks leicht verzögert beziehungsweise abgeflacht werden.
+\subsection{Vergleich der gefilterten und ungefilterten Beschleunigungsdaten (Aufgabe 7)}
 
+Zur Untersuchung der Signalfilterung wurden die ursprünglichen Messdaten mit den gefilterten Messdaten verglichen. Hierfür wurde ein Tiefpassfilter in Form eines gleitenden Mittelwerts (Moving Average) verwendet. 
+
+\begin{figure}[H]
+     \centering
+     \includegraphics[width=0.9\textwidth]{Abbildungen/diagramm_nummer6 copy.png}
+     \caption{Gefilterte Beschleunigungsdaten für die sechs verschiedenen Sensororientierungen.}
+     \label{fig:aufgabe7}
+\end{figure}
+
+Beim Vergleich der beiden Diagramme ist zu erkennen, dass die gefilterten Daten einen deutlich gleichmäßigeren und ruhigeren Signalverlauf aufweisen. 
+Insbesondere in den konstanten Messabschnitten, in denen der Sensor jeweils eine Beschleunigung von ungefähr $+1g$ oder $-1g$ misst, werden die Schwankungen der ungefilterten Daten deutlich reduziert. 
+
+Durch den verwendeten Filter werden schnelle Schwankungen abgeschwächt, während langsamere Änderungen weitgehend 
+erhalten bleiben. Der Filter verbessert somit die Lesbarkeit und Interpretierbarkeit der aufgezeichneten Beschleunigungsdaten.
 \subsection{Bestimmung der Abtastfrequenz (Aufgabe 8)}
 
 Zur Bestimmung der tatsächlichen Abtastfrequenz wurde jedem Messwert während der Datenerfassung ein Zeitstempel direkt auf dem Mikrocontroller zugeordnet. Hierfür wurde eine Zeitfunktion des Mikrocontrollers verwendet. Die Zeitstempel wurden gemeinsam mit den Beschleunigungswerten gespeichert.
