@@ -38,7 +38,7 @@
 
 \tableofcontents%\thispagestyle{empty}
 \listoffigures
-\listoftables
+%\listoftables
 
 \newpage
 
@@ -207,9 +207,9 @@ Daraus folgt:
 Der ADC-Messwert von $520$ entspricht somit einer Temperatur
 von ungefähr $30{,}8\,^\circ\mathrm{C}$.
 
-\subsection{Beschleunigungssensor: Koordinatensystem und Skalierung}
+\subsection{Sensorachsen und Skalierung}
 
-Der im Versuch verwendete Beschleunigungssensor MMA8452Q misst die Beschleunigung entlang drei orthogonaler
+Der im Versuch verwendete Beschleunigungssensor misst die Beschleunigung entlang drei orthogonaler
 Raumachsen (X, Y und Z). Dadurch werden Beschleunigungen unabhängig voneinander in allen drei Raumrichtungen erfasst.
 
 \textbf{Achsenzuordnung und Überprüfung}
@@ -263,7 +263,7 @@ Mit einer Empfindlichkeit von 1024 Counts/g ergibt sich folgende Umrechnungsform
 
 \section{Dynamische Beschleunigungsmessung}
 
-\subsection{Durchführung und Darstellung der Messung (Aufgabe 4a)}
+\subsection{Durchführung und Darstellung der Messung}
 
 Zunächst wurde der Sensor mit geschlossener Hand für ca. zehn Sekunden auf und ab bewegt.
 Die Messwerte wurden ausgegeben und anschließend in einer Textdatei gespeichert.
@@ -277,7 +277,7 @@ und grafisch dargestellt. Dabei wurde die Beschleunigung über der Zeit aufgetra
      \label{fig:aufgabe4a}
 \end{figure}
 
-\subsection{Plateaus der Signalpeaks (Aufgabe 4b)}
+\subsection{Plateaus der Signalpeaks}
 An den Spitzen des Signals sind Plateaus zu erkennen, da es zu einer Sättigung des Sensors kommt.
 Bei der verwendeten Einstellung \texttt{SCALE\_2G} beträgt der Messbereich des Sensors ungefähr $-2g$ bis $+2g$.
 Wird dieser Bereich von der tatsächlichen Beschleunigung überschritten, kann der Sensor den Wert nicht mehr korrekt erfassen und der maximal darstellbare
@@ -286,7 +286,7 @@ Wert wird ausgegeben. Die Spitzen des Signals werden also abgeschnitten und es e
 Um das Problem zu reduzieren, könnte man den Messbereich des Sensors vergrößern (beispielsweise auf \texttt{SCALE\_4G} oder \texttt{SCALE\_8G}). Allerdings nimmt dabei die Empfindlichkeit ab, 
 wodurch kleinere Beschleunigungen nicht mehr so genau erfasst werden können. 
 
-\subsection{Abweichungen zwischen Bewegung und Messsignal (Aufgabe 4c)}
+\subsection{Abweichungen zwischen Bewegung und Messsignal}
 Die Messdaten stellen die tatsächlich ausgeführte Bewegung nicht dar, da der Sensor die Beschleunigung nur in bestimmten Zeitabständen erfasst (Abtastrate).
 Wie viele neue Messwerte pro Sekunde bereitgestellt werden, wird durch die Output Data Rate (ODR) bestimmt. Bei einer zu niedrigen Abtastrate können schnelle Änderungen 
 der Beschleunigung verloren gehen.
@@ -295,23 +295,12 @@ Zusätzlich können unregelmäßige Handbewegungen zu Schwankungen im aufgezeich
 
 \section{Anpassung der Abtastrate und Vergleich der Messungen}
 
-\subsection{Änderung der Sensoreinstellungen (Aufgabe 5)}
-Um die aufgezeichneten Messdaten besser an die tatsächliche Bewegung anzupassen, wurde das Datenblatt des Sensor konsultiert und anschließend der Arduino Code abgeändert.
-
-Die Informationen zur Einstellung des Messbereichs und der Abtastrate sind in Abschnitt 6.1 des Datenblatts in Tabelle 15 und Tabelle 16 zu finden. \cite[S.23]{nxp_mma8452q}
-
-Die Bits FS[1:0] legen den Full-Scale-Bereich fest. Dabei entsprechen die Bitkombinationen 00, 01 und 10 den Messbereichen $\pm 2g$, $\pm 4g$ und $\pm 8g$. 
-
-Die Empfindlichkeit des Sensors hängt vom gewählten Messbereich ab. Laut Tabelle 2 des Datenblatts \cite[S.6]{nxp_mma8452q}beträgt sie bei $\pm 2g$ 1024 Counts/g, bei $\pm 4g$ 512 Counts/g und bei $\pm 8g$ 256 Counts/g. 
-
-Ein größerer Messbereich kann höhere Beschleunigungen erfassen, reduziert jedoch die Auflösung. Solange keine Sättigung auftritt, sollte deshalb ein kleiner Messbereich gewählt werden.
-
-Für die zweite Messung wurde die Abtastrate auf 200 Hz erhöht, dadurch konnten schnelle Änderungen der Beschleunigung genauer erfasst werden.
+\subsection{Änderung der Sensoreinstellungen}
+Zur Anpassung an die Bewegung wurde die Sensorkonfiguration anhand des Datenblatts geändert. Die Bits FS[1:0] legen den Messbereich fest: 00 entspricht ±2g, 01 entspricht ±4g und 10 entspricht ±8g \cite[S.~23, Tabelle 15]{nxp_mma8452q}. Die Empfindlichkeit beträgt bei ±4g 512 Counts/g \cite[S.~6, Tabelle 2]{nxp_mma8452q}. Ein größerer Messbereich ermöglicht die Erfassung höherer Beschleunigungen, verringert jedoch die Auflösung. Daher wurde der Messbereich auf ±4g eingestellt. Zusätzlich wurde die Abtastrate (ODR) auf 200 Hz erhöht \cite[S.~23, Tabelle 16]{nxp_mma8452q}.
 
 \subsection{Vergleich der Messungen}
 
-Nach der Anpassung der Sensorkonfiguration wurde das Experiment erneut durchgeführt. Dabei wurde der Sensor wieder für etwa zehn Sekunden in der geschlossenen Hand einmal pro Sekunde auf und ab bewegt. Anschließend wurden erneut vier Sekunden der Messdaten ausgewählt und grafisch dargestellt.
-
+Anschließend wurde die Messung wiederholt. Der Sensor wurde etwa zehn Sekunden lang ungefähr einmal pro Sekunde in der geschlossenen Hand auf und ab bewegt. Für den Vergleich wurden erneut vier Sekunden der Messdaten dargestellt.
 
 \begin{figure}[H]
      \centering
@@ -320,12 +309,11 @@ Nach der Anpassung der Sensorkonfiguration wurde das Experiment erneut durchgef�
      \label{fig:aufgabe5}
 \end{figure}
 
-Im Vergleich zur vorherigen Messung ist durch die höhere Abtastrate eine genauere zeitliche Darstellung der Beschleunigungsänderungen zu erwarten. Der Signalverlauf kann dadurch der ausgeführten Handbewegung besser folgen. Gemeinsamkeiten zwischen beiden Messungen ergeben sich durch die gleiche 
-Bewegungsdurchführung und die weiterhin vorhandene Erdbeschleunigung. Unterschiede können insbesondere durch die höhere Anzahl an Messpunkten und die dadurch verbesserte zeitliche Auflösung entstehen. Eine mögliche Sättigung der Signalpeaks wird durch die Erhöhung der Abtastrate allein jedoch nicht behoben, da diese vom eingestellten Messbereich des Sensors abhängt.
+Durch die Einstellung auf 200 Hz ist das Signal zeitlich feiner aufgelöst. Dadurch lassen sich die Beschleunigungsänderungen während der Bewegung genauer darstellen. Die grundsätzliche Signalform bleibt aufgrund der gleichen Bewegungsdurchführung vergleichbar. Der Messbereich von ±4g ermöglicht zudem die Erfassung höherer Beschleunigungen als bei ±2g, allerdings mit geringerer Empfindlichkeit.
 
-\section{Statische Beschleunigungsmessung und Signalfilterung}
+\section{Statische Beschleunigungsmessung}
 
-\subsection{Messung der sechs Sensororientierungen (Aufgabe 6)}
+\subsection{Messung der sechs Sensororientierungen}
 
 Zur Überprüfung der Messgenauigkeit des Beschleunigungssensors wurden alle drei Sensorachsen (X, Y und Z) jeweils nach oben und nach unten ausgerichtet. Daraus ergeben sich insgesamt sechs verschiedene Sensororientierungen. Die Messwerte aller sechs Orientierungen wurden gemeinsam in einem Diagramm dargestellt.
 
@@ -348,7 +336,7 @@ Allerdings sind in den Messkurven teilweise Schwankungen und kurzzeitige Ausschl
 
 Insgesamt stimmen die Messergebnisse mit den theoretisch erwarteten Beschleunigungswerten überein.
 
-\subsection{Vergleich der gefilterten und ungefilterten Beschleunigungsdaten (Aufgabe 7)}
+\subsection{Vergleich der Beschleunigungsdaten}
 
 Zur Untersuchung der Signalfilterung wurden die ursprünglichen Messdaten mit den gefilterten Messdaten verglichen. Hierfür wurde ein Tiefpassfilter in Form eines gleitenden Mittelwerts (Moving Average) verwendet. 
 
@@ -364,7 +352,7 @@ Insbesondere in den konstanten Messabschnitten, in denen der Sensor jeweils eine
 
 Durch den verwendeten Filter werden schnelle Schwankungen abgeschwächt, während langsamere Änderungen weitgehend 
 erhalten bleiben. Der Filter verbessert somit die Lesbarkeit und Interpretierbarkeit der aufgezeichneten Beschleunigungsdaten.
-\subsection{Bestimmung der Abtastfrequenz (Aufgabe 8)}
+\subsection{Bestimmung der Abtastfrequenz}
 
 Zur Bestimmung der tatsächlichen Abtastfrequenz wurde jedem Messwert während der Datenerfassung ein Zeitstempel direkt auf dem Mikrocontroller 
 zugeordnet. Anhand dieser Zeitstempel wurden die zeitlichen Abstände zwischen zwei aufeinanderfolgenden Messungen berechnet. Aus dem mittleren 
@@ -402,7 +390,7 @@ Die Abtastfrequenz wurde erneut anhand der gespeicherten Zeitstempel bestimmt. A
 Die mittlere Abtastfrequenz des mobilen Messsystems beträgt [WERT] Hz. Die zugehörige Standardabweichung beträgt [WERT] ms.
 
 Unterschiede zwischen den beiden Messsystemen können durch die unterschiedlichen Abläufe der Datenerfassung entstehen. Insbesondere Schreibzugriffe auf die SD-Karte benötigen unterschiedlich lange und können dadurch Schwankungen der Messintervalle verursachen. Auch die unterschiedliche Programmstruktur sowie die serielle Datenübertragung des ersten Messsystems können die Abtastfrequenz beeinflussen.
-
+\newpage
 \bibliographystyle{IEEEtran}	
 \bibliography{Literatur}
 

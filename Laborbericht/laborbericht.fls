@@ -570,10 +570,6 @@ INPUT .\laborbericht.lof
 INPUT .\laborbericht.lof
 INPUT laborbericht.lof
 OUTPUT laborbericht.lof
-INPUT .\laborbericht.lot
-INPUT .\laborbericht.lot
-INPUT laborbericht.lot
-OUTPUT laborbericht.lot
 INPUT C:\Users\Admin\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmss12.tfm
 INPUT C:\Users\Admin\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmssbx10.tfm
 INPUT C:\Users\Admin\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr9.tfm
@@ -610,6 +606,7 @@ INPUT .\Abbildungen\Accelerometer_Test_abgeschnitten.png
 INPUT .\Abbildungen\Accelerometer_Test_abgeschnitten.png
 INPUT .\Abbildungen\Accelerometer_Test_abgeschnitten.png
 INPUT C:\Users\Admin\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmtt10.tfm
+INPUT C:\Users\Admin\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcss1000.tfm
 INPUT .\Abbildungen\Accelerometer_Test.png
 INPUT .\Abbildungen\Accelerometer_Test.png
 INPUT .\Abbildungen\Accelerometer_Test.png
@@ -642,6 +639,8 @@ INPUT .\laborbericht.bbl
 INPUT .\laborbericht.bbl
 INPUT laborbericht.bbl
 INPUT laborbericht.aux
+INPUT C:\Users\Admin\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcss1000.pk
+INPUT C:\Users\Admin\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcss1000.pk
 INPUT C:\Users\Admin\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1000.pk
 INPUT C:\Users\Admin\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1000.pk
 INPUT C:\Users\Admin\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
