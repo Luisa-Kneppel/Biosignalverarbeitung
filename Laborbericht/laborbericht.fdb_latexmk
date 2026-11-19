@@ -1,19 +1,21 @@
 # Fdb version 4
-["bibtex laborbericht"] 1794935086.29375 "laborbericht.aux" "laborbericht.bbl" "laborbericht" 1794935086.91139 0
+["bibtex laborbericht"] 1795122829.14259 "laborbericht.aux" "laborbericht.bbl" "laborbericht" 1795123352.79329 0
   "./IEEEtran.bst" 1793950938 59506 016987d9be15acf51cdd7252d40ecec2 ""
   "./Literatur.bib" 1794935085 1148 5ecc85cf2912d3af7108cdc3f722851b ""
-  "laborbericht.aux" 1794934664 4587 d7ca60b55b7bad28af2e45e64500eb29 "pdflatex"
+  "laborbericht.aux" 1795123350 5198 7b5a48d0fdf5cd2a395563f199b3efcb "pdflatex"
   (generated)
   "laborbericht.bbl"
   "laborbericht.blg"
   (rewritten before read)
-["pdflatex"] 1794934659.50555 "c:/Labor Biosignalverarbeitung/Biosignalverarbeitung/Laborbericht/laborbericht.tex" "laborbericht.pdf" "laborbericht" 1794935086.91221 0
+["pdflatex"] 1795123339.71278 "c:/Labor Biosignalverarbeitung/Biosignalverarbeitung/Laborbericht/laborbericht.tex" "laborbericht.pdf" "laborbericht" 1795123352.79459 0
   "Abbildungen/Abtastfrequenz_Ausschnitt.png" 1794930556 270935 12c4ab69d2037f3f039941ab2b6500cd ""
-  "Abbildungen/Accelerometer_Test.png" 1794664021 471898 8427308a2f617803eef210ec87e02c49 ""
+  "Abbildungen/Accelerometer_Test.png" 1795121294 356058 e7be477f5dc47bc9792bf15f3643593a ""
   "Abbildungen/Accelerometer_Test_abgeschnitten.png" 1794664021 511365 c6ccc18ce2192d6bcc05035225aca46f ""
   "Abbildungen/Achsen.png" 1793958155 38385 c25ea6ca709c2121353e25e298023a71 ""
   "Abbildungen/diagramm_nummer6 copy.png" 1794924821 209888 91433ee2bf27ce2d8fb713397291a26b ""
   "Abbildungen/diagramm_nummer6.png" 1794664021 250743 a4aea833343650d1a494274cd22a20bd ""
+  "Abbildungen/vergleich_abtastfrequenz.png" 1795121294 332240 98ffac6d92eebc45b67893c01eaa191f ""
+  "Abbildungen/vergleich_imu_messungen.png" 1795121294 574194 6db7a62dc72b55d2a37387a34194c032 ""
   "C:/Users/Admin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1794923463 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/Admin/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1793951868 11548 264c31144786e74ef3841da38c77f91a ""
   "C:/Users/Admin/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcss1000.pk" 1793955342 10628 4d6eaa31634e8bf56a500d4202bd7b3c ""
@@ -282,14 +284,14 @@
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/pst-xkey.sty" 1656236919 1694 74b0201cd6a70abed294b6332f129c41 ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/xstring/xstring.sty" 1693735632 123 a302f2c651a95033260db60e51527ae8 ""
-  "c:/Labor Biosignalverarbeitung/Biosignalverarbeitung/Laborbericht/laborbericht.tex" 1794935013 19538 ae4b8f92b795a6f4863629f60d52c1ca ""
+  "c:/Labor Biosignalverarbeitung/Biosignalverarbeitung/Laborbericht/laborbericht.tex" 1795123338 20781 8498fafefe9bbe111a92d616afc66744 ""
   "deckblatt.tex" 1793953427 910 1ab88281107da859e3fa56d2f620643b ""
   "definitions.tex" 1794923440 9565 2f3d0ca3add2c359aaa3a4229be7a79e ""
-  "laborbericht.aux" 1794934664 4587 d7ca60b55b7bad28af2e45e64500eb29 "pdflatex"
-  "laborbericht.bbl" 1794935086 1378 46a20845fac3de2a898edb1ffac8015b "bibtex laborbericht"
-  "laborbericht.lof" 1794934664 1139 022f76b860a008b6c3df4d4d9dc20ad3 "pdflatex"
-  "laborbericht.tex" 1794935013 19538 ae4b8f92b795a6f4863629f60d52c1ca ""
-  "laborbericht.toc" 1794934664 1515 d8a949c61351accd0df15b2c98685c92 "pdflatex"
+  "laborbericht.aux" 1795123350 5198 7b5a48d0fdf5cd2a395563f199b3efcb "pdflatex"
+  "laborbericht.bbl" 1795122829 1378 46a20845fac3de2a898edb1ffac8015b "bibtex laborbericht"
+  "laborbericht.lof" 1795123350 1503 9f00fe3d76d05fdc5ef13cf95db7be78 "pdflatex"
+  "laborbericht.tex" 1795123338 20781 8498fafefe9bbe111a92d616afc66744 ""
+  "laborbericht.toc" 1795123350 1503 b43813bd642e84de49110c4a3c602aa4 "pdflatex"
   (generated)
   "laborbericht.aux"
   "laborbericht.lof"

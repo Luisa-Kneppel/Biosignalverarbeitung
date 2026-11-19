@@ -15,4 +15,4 @@
 \contentsline {subsection}{\numberline {5.1}Messung der sechs Sensororientierungen}{8}{}%
 \contentsline {subsection}{\numberline {5.2}Vergleich der Beschleunigungsdaten}{8}{}%
 \contentsline {subsection}{\numberline {5.3}Bestimmung der Abtastfrequenz}{9}{}%
-\contentsline {subsection}{\numberline {5.4}Vergleich mit dem mobilen Messsystem (Aufgabe 9)}{10}{}%
+\contentsline {subsection}{\numberline {5.4}Vergleich mit dem mobilen Messsystem}{10}{}%
