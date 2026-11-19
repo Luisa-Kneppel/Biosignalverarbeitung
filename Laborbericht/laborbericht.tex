@@ -257,8 +257,8 @@ Nach der Anpassung der Sensorkonfiguration wurde das Experiment erneut durchgef�
      \label{fig:aufgabe5}
 \end{figure}
 
-Im Vergleich zur vorherigen Messung ist durch die höhere Abtastrate eine genauere zeitliche Darstellung der Beschleunigungsänderungen zu erwarten. Der Signalverlauf kann dadurch der ausgeführten Handbewegung besser folgen. Gemeinsamkeiten zwischen beiden Messungen ergeben sich durch die gleiche 
-Bewegungsdurchführung und die weiterhin vorhandene Erdbeschleunigung. Unterschiede können insbesondere durch die höhere Anzahl an Messpunkten und die dadurch verbesserte zeitliche Auflösung entstehen. Eine mögliche Sättigung der Signalpeaks wird durch die Erhöhung der Abtastrate allein jedoch nicht behoben, da diese vom eingestellten Messbereich des Sensors abhängt.
+Im Vergleich zur vorherigen Messung ist durch die höhere Abtastrate eine genauere zeitliche Darstellung der Beschleunigungs- und Bewegungsänderung zu erwarten. Der Signalverlauf kann dadurch der ausgeführten Handbewegung besser folgen. Da der Sensor in z-Rcihtung auf und ab bewegt wurde ist diese Funktion besonder ausgeprägt, die x- und y-Funktion sind nur kleine Ausschläge, die Unstetigkeiten in der eigentlich Bewegung anzeigen. Gemeinsamkeiten zwischen beiden Messungen ergeben sich durch die gleiche 
+Bewegungsdurchführung und die weiterhin vorhandene Erdbeschleunigung. Unterschiede, wie die deutlich geringere Periodendauer, können insbesondere durch die höhere Anzahl an Messpunkten und die dadurch veränderte zeitliche Auflösung entstehen. Eine mögliche Sättigung der Signalpeaks wird durch die Erhöhung der Abtastrate allein jedoch nicht behoben, da diese vom eingestellten Messbereich des Sensors abhängt.
 
 \section{Statische Beschleunigungsmessung und Signalfilterung}
 
@@ -333,13 +333,52 @@ Die berechnete mittlere Abtastfrequenz beträgt [WERT] Hz. Die Standardabweichun
 
 \subsection{Vergleich mit dem mobilen Messsystem (Aufgabe 9)}
 
-Im letzten Versuchsteil wurde das mobile Messsystem mit DataLogger und Batterie verwendet. Die Datenerfassung erfolgte mit dem Arduino-Code \texttt{Lab1Code2} über einen Zeitraum von ungefähr zehn Sekunden.
+\subsection{Aufgabe 9: Vergleich der Abtastfrequenzen}
 
-Die Abtastfrequenz wurde erneut anhand der gespeicherten Zeitstempel bestimmt. Anschließend wurden die Ergebnisse mit der zuvor gemessenen Abtastfrequenz des ersten Messsystems verglichen.
+Im letzten Versuchsteil wurde das mobile Messsystem mit DataLogger und
+Batterie verwendet. Die Datenerfassung erfolgte mit dem Arduino-Code
+\texttt{Lab1Code2} über einen Zeitraum von ungefähr zehn Sekunden.
 
-Die mittlere Abtastfrequenz des mobilen Messsystems beträgt [WERT] Hz. Die zugehörige Standardabweichung beträgt [WERT] ms.
+Die Abtastfrequenz wurde erneut anhand der gespeicherten Zeitstempel
+bestimmt. Anschließend wurden die Ergebnisse mit der zuvor gemessenen
+Abtastfrequenz des ersten Messsystems verglichen. Die mittlere
+Abtastfrequenz des mobilen Messsystems beträgt
+\(f_{\mathrm{mobil}} = 50{,}36\,\mathrm{Hz}\). Die zugehörige
+Standardabweichung der Zeitabstände beträgt
+\([\,\text{WERT}\,]\,\mathrm{ms}\). Das stationäre USB-Messsystem erreichte
+zuvor eine mittlere Abtastfrequenz von
+\(f_{\mathrm{USB}} = 102{,}31\,\mathrm{Hz}\). Damit ist die mittlere
+Abtastfrequenz des stationären Systems ungefähr doppelt so hoch wie die
+des mobilen Systems.
 
-Unterschiede zwischen den beiden Messsystemen können durch die unterschiedlichen Abläufe der Datenerfassung entstehen. Insbesondere Schreibzugriffe auf die SD-Karte benötigen unterschiedlich lange und können dadurch Schwankungen der Messintervalle verursachen. Auch die unterschiedliche Programmstruktur sowie die serielle Datenübertragung des ersten Messsystems können die Abtastfrequenz beeinflussen.
+Unterschiede zwischen den beiden Messsystemen können durch die
+unterschiedlichen Abläufe der Datenerfassung entstehen. Insbesondere
+Schreibzugriffe auf die SD-Karte benötigen unterschiedlich lange und
+können dadurch Schwankungen der Messintervalle verursachen. Auch die
+unterschiedliche Programmstruktur sowie die serielle Datenübertragung
+des ersten Messsystems können die Abtastfrequenz beeinflussen.
+
+Abbildung~\ref{fig:abtastfrequenz} zeigt den Vergleich der Zeitabstände
+zwischen aufeinanderfolgenden Messwerten und deren Verteilung.
+Abbildung~\ref{fig:imu-vergleich} stellt ergänzend die gemessenen
+Beschleunigungen in X-, Y- und Z-Richtung über der Zeit für beide
+Messsysteme gegenüber.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{vergleich_abtastfrequenz.png}
+    \caption{Vergleich der Zeitabstände zwischen den Messwerten der
+    stationären USB-Messung und der mobilen DataLogger-Messung.}
+    \label{fig:abtastfrequenz}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{vergleich_imu_messungen.png}
+    \caption{Beschleunigung in X-, Y- und Z-Richtung über der Zeit für
+    die stationäre USB-Messung und die mobile DataLogger-Messung.}
+    \label{fig:imu-vergleich}
+\end{figure}
 
 \bibliographystyle{IEEEtran}	
 \bibliography{Literatur}
