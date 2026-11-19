@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.11.6)  14 NOV 2026 16:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.11.6)  17 NOV 2026 17:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -790,6 +790,18 @@ File: tikzlibraryplotmarks.code.tex 2026-08-01 v3.1.12 (3.1.12)
 File: pgflibraryplotmarks.code.tex 2026-08-01 v3.1.12 (3.1.12)
 ))) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/base\makeidx.sty
 Package: makeidx 2021/10/04 v1.0m Standard LaTeX package
+) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
+Package: inputenc 2024/02/08 v1.3d Input encoding file
+\inpenc@prehook=\toks52
+\inpenc@posthook=\toks53
+) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2026-08-01 v3.1.12 (3.1.12)
+) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryarrows.meta.code.tex
+File: pgflibraryarrows.meta.code.tex 2026-08-01 v3.1.12 (3.1.12)
+\pgfarrowinset=\dimen376
+\pgfarrowlength=\dimen377
+\pgfarrowwidth=\dimen378
+\pgfarrowlinewidth=\dimen379
 )
 \c@example=\count410
 \c@exercise=\count411
@@ -853,19 +865,31 @@ LaTeX Encoding Info:    Redeclaring text command \" (encoding OT1) on input line
 (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count413
-\scratchdimen=\dimen376
+\scratchdimen=\dimen380
 \scratchbox=\box87
 \nofMPsegments=\count414
 \nofMParguments=\count415
-\everyMPshowfont=\toks52
+\everyMPshowfont=\toks54
 \MPscratchCnt=\count416
-\MPscratchDim=\dimen377
+\MPscratchDim=\dimen381
 \MPnumerator=\count417
 \makeMPintoPDFobject=\count418
-\everyMPtoPDFconversion=\toks53
+\everyMPtoPDFconversion=\toks55
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+ (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/grfext\grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+ (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+ (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+))
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
@@ -937,58 +961,62 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 \tf@lof=\write7
 \openout7 = `laborbericht.lof'.
 
- (laborbericht.lot)
-\tf@lot=\write8
-\openout8 = `laborbericht.lot'.
-
  [2]
-Underfull \hbox (badness 10000) in paragraph at lines 60--70
+Overfull \hbox (55.06702pt too wide) in paragraph at lines 80--81
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 123--133
 
  []
 
-[3]
-Overfull \hbox (1.03314pt too wide) in paragraph at lines 147--147
-|[]\OT1/cmss/bx/n/12 BESCHLEUNIGUNGSSENSOR: KO-OR-DI-NA-TEN-SY-STEM UND SKA-
- []
-
-<Abbildungen/Achsen.png, id=24, 231.11343pt x 166.37157pt>
+[3] [4]
+<Abbildungen/Achsen.png, id=31, 231.11343pt x 166.37157pt>
 File: Abbildungen/Achsen.png Graphic file (type png)
 <use Abbildungen/Achsen.png>
-Package pdftex.def Info: Abbildungen/Achsen.png  used on input line 162.
+Package pdftex.def Info: Abbildungen/Achsen.png  used on input line 225.
 (pdftex.def)             Requested size: 270.93883pt x 195.05502pt.
-[4 <./Abbildungen/Achsen.png>]
-<Abbildungen/Accelerometer_Test_abgeschnitten.png, id=31, 517.935pt x 394.5942pt>
+ [5 <./Abbildungen/Achsen.png>]
+<Abbildungen/Accelerometer_Test_abgeschnitten.png, id=37, 517.935pt x 394.5942pt>
 File: Abbildungen/Accelerometer_Test_abgeschnitten.png Graphic file (type png)
 <use Abbildungen/Accelerometer_Test_abgeschnitten.png>
-Package pdftex.def Info: Abbildungen/Accelerometer_Test_abgeschnitten.png  used on input line 212.
+Package pdftex.def Info: Abbildungen/Accelerometer_Test_abgeschnitten.png  used on input line 275.
 (pdftex.def)             Requested size: 354.31049pt x 269.94617pt.
- [5]
-Overfull \hbox (14.52881pt too wide) in paragraph at lines 226--226
-|[]\OT1/cmss/bx/n/12 ABWEICHUNGEN ZWI-SCHEN BE-WE-GUNG UND MESSSI-GNAL (AUF-
- []
 
-
-Overfull \hbox (8.92998pt too wide) in paragraph at lines 233--233
+Overfull \hbox (8.92998pt too wide) in paragraph at lines 296--296
 |[]\OT1/cmr/bx/n/20.74 anpassung der ab-ta-stra-te und ver-gleich
  []
 
 [6 <./Abbildungen/Accelerometer_Test_abgeschnitten.png>]
-<Abbildungen/Accelerometer_Test.png, id=41, 521.3076pt x 394.5942pt>
+<Abbildungen/Accelerometer_Test.png, id=43, 521.3076pt x 394.5942pt>
 File: Abbildungen/Accelerometer_Test.png Graphic file (type png)
 <use Abbildungen/Accelerometer_Test.png>
-Package pdftex.def Info: Abbildungen/Accelerometer_Test.png  used on input line 255.
+Package pdftex.def Info: Abbildungen/Accelerometer_Test.png  used on input line 307.
 (pdftex.def)             Requested size: 354.31049pt x 268.20007pt.
+ [7 <./Abbildungen/Accelerometer_Test.png>]
+<Abbildungen/diagramm_nummer6.png, id=50, 932.283pt x 425.6703pt>
+File: Abbildungen/diagramm_nummer6.png Graphic file (type png)
+<use Abbildungen/diagramm_nummer6.png>
+Package pdftex.def Info: Abbildungen/diagramm_nummer6.png  used on input line 322.
+(pdftex.def)             Requested size: 375.14705pt x 171.29134pt.
 
-Overfull \hbox (5.35814pt too wide) in paragraph at lines 263--263
-|[]\OT1/cmr/bx/n/20.74 statische be-schleu-ni-gungs-mes-sung und
- []
-
-[7 <./Abbildungen/Accelerometer_Test.png>]
-Overfull \hbox (3.73701pt too wide) in paragraph at lines 285--286
+Overfull \hbox (3.73701pt too wide) in paragraph at lines 341--342
 \OT1/cmss/m/n/10 Zur Un-ter-su-chung der Si-gnal-fil-te-rung wur-den die ur-spr[]ung-li-chen Messda-ten mit den ge-fil-ter-ten Messda-
  []
 
-[8] (laborbericht.bbl
+<Abbildungen/diagramm_nummer6 copy.png, id=51, 932.283pt x 425.6703pt>
+File: Abbildungen/diagramm_nummer6 copy.png Graphic file (type png)
+<use Abbildungen/diagramm_nummer6 copy.png>
+Package pdftex.def Info: Abbildungen/diagramm_nummer6 copy.png  used on input line 345.
+(pdftex.def)             Requested size: 375.14705pt x 171.29134pt.
+[8 <./Abbildungen/diagramm_nummer6.png>]
+<Abbildungen/Abtastfrequenz_Ausschnitt.png, id=56, 867.24pt x 361.35pt>
+File: Abbildungen/Abtastfrequenz_Ausschnitt.png Graphic file (type png)
+<use Abbildungen/Abtastfrequenz_Ausschnitt.png>
+Package pdftex.def Info: Abbildungen/Abtastfrequenz_Ausschnitt.png  used on input line 373.
+(pdftex.def)             Requested size: 375.14705pt x 156.3093pt.
+ [9 <./Abbildungen/diagramm_nummer6 copy.png>] [10 <./Abbildungen/Abtastfrequenz_Ausschnitt.png>] (laborbericht.bbl
 Underfull \hbox (badness 3439) in paragraph at lines 26--30
 []\OT1/cmss/bx/n/10 MMA8452Q: 3-axis, 12-bit/8-bit Di-gi-tal Ac-ce-le-ro-me-ter\OT1/cmss/m/n/10 , Frees-ca-
  []
@@ -998,24 +1026,24 @@ Underfull \hbox (badness 3019) in paragraph at lines 26--30
 \OT1/cmss/m/n/10 le Se-mi-con-duc-tors, 08/2011, rev 4.1. [On-li-ne]. Availa-ble: htt-
  []
 
-) [9] (laborbericht.aux)
+) [11] (laborbericht.aux)
  ***********
 LaTeX2e <2026-06-01>
 L3 programming layer <2026-09-09>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 36587 strings out of 467392
- 903781 string characters out of 5405639
- 1485289 words of memory out of 5000000
- 65276 multiletter control sequences out of 15000+600000
- 634253 words of font info for 63 fonts, out of 8000000 for 9000
+ 37407 strings out of 467392
+ 923626 string characters out of 5405639
+ 1490289 words of memory out of 5000000
+ 66066 multiletter control sequences out of 15000+600000
+ 638023 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 138i,12n,139p,825b,580s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on laborbericht.pdf (9 pages, 1510754 bytes).
+ 138i,12n,139p,825b,860s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcss1000.pk> <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on laborbericht.pdf (11 pages, 2310577 bytes).
 PDF statistics:
- 112 PDF objects out of 1000 (max. 8388607)
+ 134 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 28 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 43 words of extra memory for PDF output out of 10000 (max. 10000000)
 
