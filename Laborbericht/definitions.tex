@@ -11,13 +11,13 @@
 \definecolor{MSLightBlue}{rgb}{.31,.506,.741}
 % Set formats for each heading level
 %\titleformat*{\section}{\rmfamily\bfseries\huge\color{MSBlue}\lowercase}
-\titleformat{\section}[hang]{\rmfamily\bfseries\huge\color{MSBlue}\lowercase}{\thesection}{1em}{}[]
+\titleformat{\section}[hang]{\rmfamily\bfseries\huge\color{MSBlue}}{\thesection}{1em}{}[]   % \lowercase ausgeblendet
 \titleformat{\subsection}{\large\bfseries\sffamily\uppercase}{\thesubsection}{1em}{}
 \titleformat{\subsubsection}{\sffamily\bfseries}{\thesubsubsection}{1em}{}
-\renewcommand\contentsname{\ifthenelse{\boolean{english}}{table of contents.}{inhaltsverzeichnis.}}
-\renewcommand\listfigurename{\ifthenelse{\boolean{english}}{list of figures.}{abbildungsverzeichnis.}}
-\renewcommand\listtablename{\ifthenelse{\boolean{english}}{list of tables.}{tabellenverzeichnis.}}
-\renewcommand\refname{\litname.}
+\renewcommand\contentsname{\ifthenelse{\boolean{english}}{table of contents.}{Inhaltsverzeichnis}}
+\renewcommand\listfigurename{\ifthenelse{\boolean{english}}{list of figures.}{Abbildungsverzeichnis}}
+\renewcommand\listtablename{\ifthenelse{\boolean{english}}{list of tables.}{Tabellenverzeichnis}}
+\renewcommand\refname{\litname}
 \usepackage{exscale,relsize}
 \usepackage{fancyhdr}
 \usepackage[small]{caption}
