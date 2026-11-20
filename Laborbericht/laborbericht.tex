@@ -87,21 +87,16 @@ Die ausgewerteten Daten werden mittels Python dargestellt.
   \item \textbf{9\,V-Blockbatterie:} Versorgt das gesamte System mit
   Strom.
 
-  \item \textbf{Mikrocontroller:} Arbeitet als I$^2$C-Controller,
-  wandelt die 9\,V in die Betriebsspannung von 3.3\,V um und liest die Messdaten aus.
+  \item \textbf{Mikrocontroller:} Wandelt die 9\,V in die Betriebsspannung von 3.3\,V um und liest die Messdaten aus.
 
-  \item \textbf{Beschleunigungssensor:} Misst die Beschleunigung
-  in mehreren Achsen und die digitalen Werte werden an
-  den Controller weitergegeben.
+  \item \textbf{Beschleunigungssensor:} Misst die Beschleunigung in mehreren Achsen und die digitalen Werte werden an den Controller weitergegeben.
 
-  \item \textbf{SD-Kartengerät:} Empfängt die Messdaten und
-  speichert sie als Datei auf der SD-Karte.
+  \item \textbf{SD-Kartengerät:} Empfängt die Messdaten und speichert sie als Datei auf der SD-Karte.
 \end{itemize}
 
 \subsection*{Verbindungen}
 \begin{enumerate}
-  \item[(1)] \textbf{9\,V DC:} Spannungsversorgung von der Batterie zum
-  Board über den Hohlstecker, ohne Datenübertragung.
+  \item[(1)] \textbf{9\,V DC:} Spannungsversorgung von der Batterie zum Board über den Hohlstecker, ohne Datenübertragung.
 
   \item[(2)] \textbf{I$^2$C, 100\,kHz (Board $\leftrightarrow$ Sensor):}
   Vieradriges Kabel mit SDA (Daten), SCL (Takt), VCC und GND. Der Controller
@@ -114,8 +109,7 @@ Die ausgewerteten Daten werden mittels Python dargestellt.
   Beschleunigung wirkt auf den Sensor und wird dort in ein elektrisches
   Signal umgewandelt.
 
-  \item[(5)] \textbf{SD-Gerät $\rightarrow$ SD-Karte:} Die empfangenen
-  Messwerte werden auf der Karte gespeichert.
+  \item[(5)] \textbf{SD-Gerät $\rightarrow$ SD-Karte:} Die empfangenen Messwerte werden auf der Karte gespeichert.
 \end{enumerate}
 
 
@@ -125,8 +119,7 @@ $0$ bis $3{,}3\,\mathrm{V}$ messen kann und einen Messbereich von
 $0$ bis $40\,^\circ\mathrm{C}$ hat. Der Microcontroller, der die Sensordaten
 verarbeitet und digitalisiert, kann bis zu $5\,\mathrm{V}$ und und mit einer Auflösung 
 von $10\,\mathrm{Bit}$ messen.
-Für einen ausgegebenen Messwert von $520$
-soll die entsprechende Temperatur berechnet werden.
+Für einen ausgegebenen Messwert von $520$ soll die entsprechende Temperatur berechnet werden.
 \newline
 \newline
 \textbf{1. Berechnung der Sensorspannung aus dem ADC-Messwert}
@@ -164,11 +157,7 @@ Mit dem gegebenen Messwert von $520$ ergibt sich:
 
 \begin{equation}
     U_{\mathrm{Sensor}} =
-    520 \cdot 0{,}004883\,\mathrm{V}
-\end{equation}
-
-\begin{equation}
-    \boxed{U_{\mathrm{Sensor}} \approx 2{,}539\,\mathrm{V}}
+    520 \cdot 0{,}004883\,\mathrm{V}{\approx 2{,}539\,\mathrm{V}}
 \end{equation}
 
 \textbf{2. Umrechnung der Spannung in eine Temperatur}
@@ -209,8 +198,8 @@ von ungefähr $30{,}8\,^\circ\mathrm{C}$.
 
 \subsection{Sensorachsen und Skalierung}
 
-Der im Versuch verwendete Beschleunigungssensor misst die Beschleunigung entlang drei orthogonaler
-Raumachsen (X, Y und Z). Dadurch werden Beschleunigungen unabhängig voneinander in allen drei Raumrichtungen erfasst.
+Der im Versuch verwendete Beschleunigungssensor misst die Beschleunigung entlang drei unabhängiger, orthogonaler
+Raumachsen (X, Y und Z). 
 
 \textbf{Achsenzuordnung und Überprüfung}
 
@@ -266,7 +255,7 @@ Mit einer Empfindlichkeit von 1024 Counts/g ergibt sich folgende Umrechnungsform
 \subsection{Durchführung und Darstellung der Messung}
 
 Zunächst wurde der Sensor mit geschlossener Hand für ca. zehn Sekunden auf und ab bewegt.
-Die Messwerte wurden ausgegeben und anschließend in einer Textdatei gespeichert.
+Die Messwerte wurden ausgegeben und anschließend in einer csv - Datei gespeichert.
 
 Für die Auswertung wurden vier Sekunden der aufgezeichneten Messdaten ausgewählt
 und grafisch dargestellt. Dabei wurde die Beschleunigung über der Zeit aufgetragen.
@@ -296,11 +285,11 @@ Zusätzlich können unregelmäßige Handbewegungen zu Schwankungen im aufgezeich
 \section{Anpassung der Abtastrate und Vergleich der Messungen}
 
 \subsection{Änderung der Sensoreinstellungen}
-Zur Anpassung an die Bewegung wurde die Sensorkonfiguration anhand des Datenblatts geändert. Die Bits FS[1:0] legen den Messbereich fest: 00 entspricht ±2g, 01 entspricht ±4g und 10 entspricht ±8g \cite[S.~23, Tabelle 15]{nxp_mma8452q}. Die Empfindlichkeit beträgt bei ±4g 512 Counts/g \cite[S.~6, Tabelle 2]{nxp_mma8452q}. Ein größerer Messbereich ermöglicht die Erfassung höherer Beschleunigungen, verringert jedoch die Auflösung. Daher wurde der Messbereich auf ±4g eingestellt. Zusätzlich wurde die Abtastrate (ODR) auf 200 Hz erhöht \cite[S.~23, Tabelle 16]{nxp_mma8452q}.
+Zur Anpassung an die Bewegung wurde die Sensorkonfiguration anhand des Datenblatts geändert. Die Bits FS[1:0] legen den Messbereich fest: 00 entspricht ±2g, 01 entspricht ±4g und 10 entspricht ±8g \cite[S.~23, Tabelle 15]{nxp_mma8452q}. Die Empfindlichkeit beträgt bei ±8g 256 Counts/g \cite[S.~6, Tabelle 2]{nxp_mma8452q}. Ein größerer Messbereich ermöglicht die Erfassung höherer Beschleunigungen, verringert jedoch die Auflösung. Daher wurde der Messbereich auf ±8g eingestellt. Zusätzlich wurde die Abtastrate (ODR) auf 200 Hz erhöht \cite[S.~23, Tabelle 16]{nxp_mma8452q}.
 
 \subsection{Vergleich der Messungen}
 
-Anschließend wurde die Messung wiederholt. Der Sensor wurde etwa zehn Sekunden lang ungefähr einmal pro Sekunde in der geschlossenen Hand auf und ab bewegt. Für den Vergleich wurden erneut vier Sekunden der Messdaten dargestellt.
+Anschließend wurde die Messung wiederholt. 
 
 \begin{figure}[H]
      \centering
@@ -309,7 +298,7 @@ Anschließend wurde die Messung wiederholt. Der Sensor wurde etwa zehn Sekunden 
      \label{fig:aufgabe5}
 \end{figure}
 
-Durch die Einstellung auf 200 Hz ist das Signal zeitlich feiner aufgelöst. Dadurch lassen sich die Beschleunigungsänderungen während der Bewegung genauer darstellen. Die grundsätzliche Signalform bleibt aufgrund der gleichen Bewegungsdurchführung vergleichbar. Der Messbereich von ±4g ermöglicht zudem die Erfassung höherer Beschleunigungen als bei ±2g, allerdings mit geringerer Empfindlichkeit.
+Durch die Einstellung auf 200 Hz ist das Signal zeitlich feiner aufgelöst. Dadurch lassen sich die Beschleunigungsänderungen während der Bewegung genauer darstellen. Die grundsätzliche Signalform bleibt aufgrund der gleichen Bewegungsdurchführung vergleichbar. Der Messbereich von ±8g ermöglicht zudem die Erfassung höherer Beschleunigungen als bei ±2g, allerdings mit geringerer Empfindlichkeit.
 
 \section{Statische Beschleunigungsmessung}
 
@@ -326,11 +315,7 @@ Zur Überprüfung der Messgenauigkeit des Beschleunigungssensors wurden alle dre
 
 Bei einem ruhenden Sensor sollte die jeweils vertikal ausgerichtete Achse eine Beschleunigung von ungefähr $+1g$ beziehungsweise $-1g$ anzeigen. Die beiden anderen Achsen sollten dagegen Werte nahe $0g$ aufweisen. Das Vorzeichen hängt davon ab, ob die jeweilige Sensorachse nach oben oder nach unten zeigt.
 
-Die Ergebnisse in Abbildung \ref{fig:aufgabe6} bestätigen dieses Verhalten weitgehend. Bei der Orientierung mit der Z-Achse nach oben (\texttt{z\_oben}) liegt der Messwert der Z-Achse bei ungefähr $+1g$, während die X- und Y-Achse Werte nahe $0g$ aufweisen. Wird die Z-Achse nach unten ausgerichtet (\texttt{z\_unten}), beträgt die gemessene Beschleunigung ungefähr $-1g$.
-
-Dasselbe Verhalten ist für die X- und Y-Achse zu beobachten. 
-
-Die Messwerte bestätigen somit, dass der Sensor die Erdbeschleunigung korrekt entlang der jeweiligen Raumachse erfasst. Insbesondere ist erkennbar, dass sich das Vorzeichen der gemessenen Beschleunigung beim Umkehren der Sensororientierung ändert.
+Die Ergebnisse in Abbildung \ref{fig:aufgabe6} bestätigen dieses Verhalten weitgehend. Bei der Orientierung mit der Z-Achse nach oben (\texttt{z\_oben}) liegt der Messwert der Z-Achse bei ungefähr $+1g$, während die X- und Y-Achse Werte nahe $0g$ aufweisen. Wird die Z-Achse nach unten ausgerichtet (\texttt{z\_unten}), beträgt die gemessene Beschleunigung ungefähr $-1g$. Dasselbe Verhalten ist für die X- und Y-Achse zu beobachten. 
 
 Allerdings sind in den Messkurven teilweise Schwankungen und kurzzeitige Ausschläge zu erkennen. Diese treten insbesondere während der Übergänge zwischen den verschiedenen Sensororientierungen auf und können durch Bewegungen beim Drehen und Ablegen des Sensors sowie durch Messrauschen verursacht werden. Auch in den annähernd konstanten Messabschnitten sind kleinere Abweichungen vom idealen Wert von $\pm 1g$ sichtbar.
 
@@ -363,9 +348,8 @@ zeitlichen Abstand lässt sich anschließend die Abtastfrequenz bestimmen:
 \end{equation}
 
 Zusätzlich wurde die Standardabweichung der zeitlichen Abstände berechnet, um die Regelmäßigkeit der Messungen zu beurteilen.
-
 Die Auswertung umfasst insgesamt 4602 Messwerte. Der mittlere zeitliche Abstand zwischen zwei aufeinanderfolgenden Messungen beträgt $9{,}7745\,ms$.
- Die Standardabweichung der Zeitabstände beträgt $0{,}1535\,ms$. Daraus ergibt sich eine mittlere Abtastfrequenz von $102{,}3074\,Hz$. Die 
+ Die Standardabweichung beträgt $0{,}1535\,ms$. Daraus ergibt sich eine mittlere Abtastfrequenz von $102{,}3074\,Hz$. Die 
  Standardabweichung der berechneten Abtastfrequenzen beträgt $1{,}5644\,Hz$.
 
 \begin{figure}[H]
@@ -378,8 +362,7 @@ Die Auswertung umfasst insgesamt 4602 Messwerte. Der mittlere zeitliche Abstand 
 
 Im Diagramm ist zu erkennen, dass die zeitlichen Abstände überwiegend zwischen $9{,}7\,ms$ und $10{,}2\,ms$ liegen. 
 Die Schwankungen um den Mittelwert sind vergleichsweise gering. Dies wird auch durch die Standardabweichung von $0{,}1535\,ms$ bestätigt. 
-Die Messungen erfolgen somit zeitlich relativ gleichmäßig. Die ermittelte Abtastfrequenz von ungefähr $102\,Hz$ beschreibt die durchschnittliche 
-Ausleserate des Messsystems.
+Die Messungen erfolgen somit zeitlich relativ gleichmäßig.
 
 \subsection{Vergleich mit dem mobilen Messsystem}
 
@@ -387,19 +370,17 @@ Im letzten Versuchsteil wurde das mobile Messsystem mit DataLogger und
 Batterie verwendet. Die Datenerfassung erfolgte mit dem Arduino-Code
 \texttt{Lab1Code2} über einen Zeitraum von ungefähr zehn Sekunden.
 
-Die Abtastfrequenz wurde erneut anhand der gespeicherten Zeitstempel
-bestimmt. Anschließend wurden die Ergebnisse mit der zuvor gemessenen
-Abtastfrequenz des ersten Messsystems verglichen. Die mittlere
-Abtastfrequenz des mobilen Messsystems beträgt
+Die erneut bestimmte Abtastfrequenz wurde mit der des ertsen Messsystems verglichen. 
+Die mittlere Abtastfrequenz des mobilen Messsystems beträgt
 \(f_{\mathrm{mobil}} = 50{,}36\,\mathrm{Hz}\). Die zugehörige
 Standardabweichung der Zeitabstände beträgt
-\([\,\text{WERT}\,]\,\mathrm{ms}\). Das stationäre USB-Messsystem erreichte
+\([\,\text{WERT}\,]\,\mathrm{ms}\). Das stationäre Messsystem erreichte
 zuvor eine mittlere Abtastfrequenz von
 \(f_{\mathrm{USB}} = 102{,}31\,\mathrm{Hz}\). Damit ist die mittlere
 Abtastfrequenz des stationären Systems ungefähr doppelt so hoch wie die
 des mobilen Systems.
 
-Unterschiede zwischen den beiden Messsystemen können durch die
+Unterschiede zwischen den Messsystemen können durch die
 unterschiedlichen Abläufe der Datenerfassung entstehen. Insbesondere
 Schreibzugriffe auf die SD-Karte benötigen unterschiedlich lange und
 können dadurch Schwankungen der Messintervalle verursachen. Auch die
