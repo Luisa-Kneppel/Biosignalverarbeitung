@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex laborbericht"] 1795122829.14259 "laborbericht.aux" "laborbericht.bbl" "laborbericht" 1795190372.78641 0
+["bibtex laborbericht"] 1795542457.52985 "laborbericht.aux" "laborbericht.bbl" "laborbericht" 1795542472.57358 0
   "./IEEEtran.bst" 1793950938 59506 016987d9be15acf51cdd7252d40ecec2 ""
   "./Literatur.bib" 1794935085 1148 5ecc85cf2912d3af7108cdc3f722851b ""
-  "laborbericht.aux" 1795190371 5198 7b5a48d0fdf5cd2a395563f199b3efcb "pdflatex"
+  "laborbericht.aux" 1795542470 5198 ceea316b9fa7b10a60b9c9c94f835592 "pdflatex"
   (generated)
   "laborbericht.bbl"
   "laborbericht.blg"
   (rewritten before read)
-["pdflatex"] 1795190364.7599 "c:/Labor Biosignalverarbeitung/Biosignalverarbeitung/Laborbericht/laborbericht.tex" "laborbericht.pdf" "laborbericht" 1795190372.78738 0
+["pdflatex"] 1795542458.55203 "c:/Labor Biosignalverarbeitung/Biosignalverarbeitung/Laborbericht/laborbericht.tex" "laborbericht.pdf" "laborbericht" 1795542472.57476 0
   "Abbildungen/Abtastfrequenz_Ausschnitt.png" 1794930556 270935 12c4ab69d2037f3f039941ab2b6500cd ""
   "Abbildungen/Accelerometer_Test.png" 1795121294 356058 e7be477f5dc47bc9792bf15f3643593a ""
   "Abbildungen/Accelerometer_Test_abgeschnitten.png" 1794664021 511365 c6ccc18ce2192d6bcc05035225aca46f ""
@@ -284,14 +284,14 @@
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/pst-xkey.sty" 1656236919 1694 74b0201cd6a70abed294b6332f129c41 ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/xstring/xstring.sty" 1693735632 123 a302f2c651a95033260db60e51527ae8 ""
-  "c:/Labor Biosignalverarbeitung/Biosignalverarbeitung/Laborbericht/laborbericht.tex" 1795190363 19887 0aa855e407798328d7fe7d795bb60bae ""
+  "c:/Labor Biosignalverarbeitung/Biosignalverarbeitung/Laborbericht/laborbericht.tex" 1795542425 19877 b33c43e86e1b77858371788a5f4292f5 ""
   "deckblatt.tex" 1795123554 909 403ebdbcd6f75d872462e6d9b7baea92 ""
   "definitions.tex" 1795124030 9579 85668fc3d0a5a9ab633fd46c6a759ef6 ""
-  "laborbericht.aux" 1795190371 5198 7b5a48d0fdf5cd2a395563f199b3efcb "pdflatex"
-  "laborbericht.bbl" 1795122829 1378 46a20845fac3de2a898edb1ffac8015b "bibtex laborbericht"
-  "laborbericht.lof" 1795190371 1503 9f00fe3d76d05fdc5ef13cf95db7be78 "pdflatex"
-  "laborbericht.tex" 1795190363 19887 0aa855e407798328d7fe7d795bb60bae ""
-  "laborbericht.toc" 1795190371 1503 b43813bd642e84de49110c4a3c602aa4 "pdflatex"
+  "laborbericht.aux" 1795542470 5198 ceea316b9fa7b10a60b9c9c94f835592 "pdflatex"
+  "laborbericht.bbl" 1795542458 1378 46a20845fac3de2a898edb1ffac8015b "bibtex laborbericht"
+  "laborbericht.lof" 1795542470 1503 9f00fe3d76d05fdc5ef13cf95db7be78 "pdflatex"
+  "laborbericht.tex" 1795542425 19877 b33c43e86e1b77858371788a5f4292f5 ""
+  "laborbericht.toc" 1795542470 1503 b43813bd642e84de49110c4a3c602aa4 "pdflatex"
   (generated)
   "laborbericht.aux"
   "laborbericht.lof"
