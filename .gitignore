@@ -1,0 +1,9 @@
+Laborbericht/*.aux
+Laborbericht/*.fdb_latexmk
+Laborbericht/*.fls
+Laborbericht/*.lof
+Laborbericht/*.log
+Laborbericht/*.synctex.gz
+Laborbericht/*.toc
+Laborbericht/*.bbl
+Laborbericht/*.blg
