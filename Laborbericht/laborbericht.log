@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.11.6)  20 NOV 2026 16:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.11.6)  24 NOV 2026 18:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1026,7 +1026,7 @@ File: Abbildungen/vergleich_imu_messungen.png Graphic file (type png)
 <use Abbildungen/vergleich_imu_messungen.png>
 Package pdftex.def Info: Abbildungen/vergleich_imu_messungen.png  used on input line 406.
 (pdftex.def)             Requested size: 416.83289pt x 155.23534pt.
- [10 <./Abbildungen/Abtastfrequenz_Ausschnitt.png>] [11 <./Abbildungen/vergleich_abtastfrequenz.png> <./Abbildungen/vergleich_imu_messungen.png>] (laborbericht.bbl
+ (laborbericht.bbl
 Underfull \hbox (badness 3439) in paragraph at lines 26--30
 []\OT1/cmss/bx/n/10 MMA8452Q: 3-axis, 12-bit/8-bit Di-gi-tal Ac-ce-le-ro-me-ter\OT1/cmss/m/n/10 , Frees-ca-
  []
@@ -1036,7 +1036,7 @@ Underfull \hbox (badness 3019) in paragraph at lines 26--30
 \OT1/cmss/m/n/10 le Se-mi-con-duc-tors, 08/2011, rev 4.1. [On-li-ne]. Availa-ble: htt-
  []
 
-) [12] (laborbericht.aux)
+) [10 <./Abbildungen/Abtastfrequenz_Ausschnitt.png>] [11 <./Abbildungen/vergleich_abtastfrequenz.png> <./Abbildungen/vergleich_imu_messungen.png>] (laborbericht.aux)
  ***********
 LaTeX2e <2026-06-01>
 L3 programming layer <2026-09-09>
@@ -1055,9 +1055,9 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  138i,12n,139p,825b,860s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcss1000.pk> <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on laborbericht.pdf (12 pages, 2993506 bytes).
+Output written on laborbericht.pdf (11 pages, 2992797 bytes).
 PDF statistics:
- 141 PDF objects out of 1000 (max. 8388607)
+ 138 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  53 words of extra memory for PDF output out of 10000 (max. 10000000)
 
